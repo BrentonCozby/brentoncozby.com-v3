@@ -1,0 +1,62 @@
+.menu-button {
+    position: fixed;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+    @media all and (min-width: 768px) {
+        display: none;
+        position: relative;
+    }
+
+    span {
+        height: 2px;
+        width: 100%;
+        content: '';
+        display: block;
+        background-color: #333;
+        position: relative;
+        transform: rotate(0deg);
+        transition: all .4s;
+        transition-delay: .15s;
+
+        &.span-top {
+            left: 0;
+        }
+
+        &.span-bottom {
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &.open {
+        z-index: 1001;
+
+        span {
+            background-color: #fff;
+        }
+
+        .span-top {
+            transform-origin: 0% 0%;
+            transform: rotate(45deg);
+            left: 9px;
+        }
+
+        .span-middle {
+            opacity: 0;
+            height: 0;
+        }
+
+        .span-bottom {
+            transform-origin: 100% 100%;
+            transform: rotate(-45deg);
+            top: -19px;
+        }
+    }
+}

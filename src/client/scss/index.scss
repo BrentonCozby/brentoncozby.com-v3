@@ -1,12 +1,25 @@
-// vendor
-@import "../vendor/bootstrap/css/bootstrap.css";
-@import "../vendor/font-awesome/css/font-awesome.css";
+// plugins
+@import "_normalize";
 
-// shared
-@import "./_normalize.css";
-@import "./_base.scss";
-@import "./_helpers.scss";
-@import "./_animations.scss";
+@import url('https://fonts.googleapis.com/css?family=Arsenal|Slabo+27px');
+// base styles
+* {
+    box-sizing: border-box;
+    position: relative;
+    transition: all 200ms;
+}
+body {
+    font-family: 'Slabo 27px', serif;
+}
 
-// components
-@import "./_agency.scss";
+@import "_helpers";
+
+// content
+@import "_contact";
+@import "nav/_nav";
+@import "_above-the-fold";
+@import "_about";
+@import "_portfolio";
+@import "_footer";
+
+@import "_404";

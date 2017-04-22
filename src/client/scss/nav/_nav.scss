@@ -1,0 +1,89 @@
+nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #eee;
+    text-shadow: 1px 1px 1px #000;
+    z-index: 101;
+}
+
+.title {
+    float: left;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 2.2rem;
+    line-height: 1.5rem;
+    font-family: 'Arsenal', sans-serif;
+    font-weight: normal;
+
+    @media all and (min-width: 768px) {
+        padding: 15px 0 0 15px;
+        animation-name: zoomInFromRight;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 100ms;
+    }
+
+    @media all and (min-width: 992px) {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        display: block;
+        font-size: 1rem;
+        margin-top: 10px;
+        margin-left: 3px;
+        text-transform: uppercase;
+
+        @media all and (min-width: 786px) {
+            margin-top: 15px;
+        }
+
+        @media all and (min-width: 992px) {
+            margin-top: 20px;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@keyframes zoomInFromRight {
+    from {
+        opacity: 0;
+        transform: translate(50px, 20px) scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes zoomInFromLeft {
+    from {
+        opacity: 0;
+        transform: translate(-50px, 20px) scale(.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        color: hsl(30, 100, 50);
+    }
+    33% {
+        color: hsl(70, 80, 50);
+    }
+    66% {
+        color: hsl(130, 80, 50);
+    }
+    100% {
+        color: hsl(210, 100, 50);
+    }
+}
+
+@import "_menu-button";
+@import "_menu";

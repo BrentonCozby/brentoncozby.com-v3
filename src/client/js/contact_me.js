@@ -1,4 +1,4 @@
-// Contact Form Scripts
+import './jqBootstrapValidation.js'
 
 $(function() {
 

@@ -1,17 +1,16 @@
 {
-    "name": "rally-point-webinars-website",
-    "version": "1.0.0",
-    "description": "Website for Rally Point Webinars",
-    "main": "src/index.jsx",
-    "repository": "https://github.com/BrentonCozby/rally-point-webinars-v2.git",
+    "name": "brentoncozby.com",
+    "version": "3.0.0",
+    "description": "Website for brentoncozby.com",
+    "main": "src/index.js",
+    "repository": "https://github.com/BrentonCozby/brentoncozby.com.git",
     "author": "Brenton Cozby <brenton.cozby@gmail.com>",
     "license": "MIT",
     "scripts": {
-        "dev": "cross-env NODE_ENV=development webpack-dev-server --env=dev --config ./src/webpack/index.babel.js",
-        "prod": "rimraf dist && cross-env NODE_ENV=production webpack -p --env=prod --config ./src/webpack/index.babel.js --progress --profile --colors"
+        "dev": "cross-env NODE_ENV=development webpack-dev-server --config ./webpack/index.babel.js",
+        "prod": "rimraf dist && cross-env NODE_ENV=production webpack -p --config ./webpack/index.babel.js --progress --profile --colors"
     },
     "dependencies": {
-        "axios": "^0.16.1",
         "babel-polyfill": "^6.23.0",
         "lodash.throttle": "^4.1.1",
         "pug": "^2.0.0-beta11",
@@ -23,7 +22,7 @@
         "babel-core": "^6.24.1",
         "babel-loader": "^6.4.1",
         "babel-preset-env": "^1.3.3",
-        "babel-preset-stage-2": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
         "chunk-manifest-webpack-plugin": "^1.0.0",
         "copy-webpack-plugin": "^4.0.1",
         "cross-env": "^4.0.0",

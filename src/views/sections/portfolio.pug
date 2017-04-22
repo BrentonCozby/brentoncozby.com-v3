@@ -1,0 +1,13 @@
+#portfolio.portfolio.container
+    h2.portfolio-title Featured Creations
+    .creations
+        each creation in htmlWebpackPlugin.options.creationsFeatured
+            .card
+                h3.card-title= creation.title
+                .card-image(data-png=creation.png data-gif=creation.gif, title= "Brenton Cozby's " + creation.title, alt= "Brenton Cozby's " + creation.title)
+                .card-caption
+                    p= creation.description
+                .card-buttons-container
+                    a(href= creation.demo, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.card-demo View Live]
+                    a(href= creation.code, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.card-code View Code]
+    //- a.view-all-creations-btn(href="/creations" title="Brenton Cozby's creations") View All Creations

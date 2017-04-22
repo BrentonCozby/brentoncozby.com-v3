@@ -1,22 +1,6 @@
-extends ../partials/layout
-
-block head
-    include ../partials/head
-    +makeHead('Page Not Found')
+extends ../layout
 
 block content
-    include ../partials/navbar
-    +makeNavbar('404')
-
-    header.lost
-        .container
-            .intro-text
-                .row
-                    .intro-heading lost?
-                    .intro-lead-in Looks like the page you requested isn't available.
-                    a.page-scroll.btn.btn-xl(href='/') Take Me Home
-
-    include ../partials/contact
-
-    include ../partials/footer
-    include ../partials/bottom
+    h1 Lost?
+    p The page you're looking for is unavailable.
+    a(href="/") Take Me Home

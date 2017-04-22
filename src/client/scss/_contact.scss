@@ -1,0 +1,61 @@
+.contact {
+    display: none;
+    position: fixed;
+    width: 100%;
+    max-width: 300px;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ccc;
+    z-index: 1000;
+    box-shadow: 0 10px 40px -8px #000;
+    padding: 15px;
+    border-radius: 10px;
+
+    @media all and (min-width: 768px) {
+        max-width: 500px;
+    }
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form .send {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: none;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: vertical;
+
+    @media all and (min-width: 768px) {
+        height: 300px;
+        font-size: 1.2rem;
+    }
+}
+
+.contact-form .send {
+    margin-bottom: 0;
+    background: #cef;
+    color: #333;
+    border: 1px solid #bbb;
+    cursor: pointer;
+}
+
+.contact .close {
+    color: #b00;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
