@@ -5,9 +5,15 @@
 }
 
 .banner-image {
+    background-color: #333;
     background-image: url('../../../assets/images/gardens-pic.jpg');
     background-position: 50% 0%;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
     width: 100%;
-    height: 46vw;
+    height: 60vw;
+
+    @media all and (min-width: 992px) {
+        height: 40vw;
+    }
 }
