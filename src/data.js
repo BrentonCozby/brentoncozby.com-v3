@@ -68,7 +68,7 @@ const images = {
     'images/little-brenton-lawnmower.jpg': 'Brenton Cozby learning the meaning of "chores".',
     'images/catastrophe.jpg': 'Brenton Cozby realizing college is ending.',
     'images/alligators.jpg': 'Brenton Cozby at an alligator park in Miami.',
-    'images/boxing.jpg': 'Brenton Cozby training with the University of Miami Boxing Club.',
+    'images/boxing.jpg': 'Brenton Cozby "Not now God, I\'m doing pushups"',
     'images/city-year.jpg': 'Brenton Cozby making new friends at City Year Miami.',
     'images/cozby-boys.jpg': 'Brenton Cozby with the Cozby Boys.',
     'images/smoke.jpg': 'Brenton Cozby practicing the instagram selfie.',

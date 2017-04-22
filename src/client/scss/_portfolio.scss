@@ -1,21 +1,19 @@
 .portfolio {
-    background-image: url('../../../assets/images/wooden-texture.jpg');
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
     width: 100%;
+    max-width: 1200px;
     padding: 1px;
 }
 
 .portfolio-title {
-    margin: 20px;
+    margin: 35px 0 0 15px;
+    font-size: 32px;
 }
 
 .creations {
     margin: 30px 0;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .card {

@@ -57,8 +57,8 @@
     color: #eee;
     text-decoration: none;
     text-transform: uppercase;
-    font-family: 'Arsenal', sans-serif;
     cursor: pointer;
+    letter-spacing: 2px;
 }
 
 @media all and (min-width: 768px) {
@@ -68,19 +68,16 @@
     }
 
     .menu-a {
-        padding: 0 15px;
-        margin: 0 0 0 15px;
+        padding: 10px 5px;
+        line-height: 1;
+        margin: 20px 15px 0px 15px;
         color: #eee;
         text-shadow: 1px 1px 1px #000;
-        font-weight: bolder;
-        font-size: 1rem;
+        font-weight: 400;
+        font-size: 16px;
 
         &:first-of-type {
             margin-left: 0;
-        }
-
-        @media all and (min-width: 992px) {
-            font-size: 1.2rem;
         }
     }
 }

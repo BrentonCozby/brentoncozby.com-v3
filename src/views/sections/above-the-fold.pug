@@ -1,8 +1,2 @@
 .landing-container
-    .images-container
-        each description, src in htmlWebpackPlugin.options.images
-            figure
-                div.image(style=`background-image: url('${src}')`, title=description)
-                div.image-overlay
-                figcaption #{description.split('Brenton Cozby ')[1]}
-    h2.need-something Do you need to make something?
+    .banner-image

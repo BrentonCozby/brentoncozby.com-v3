@@ -1,116 +1,13 @@
 .landing-container {
-    min-height: 100vh;
     background-color: #333;
     color: #eee;
     text-shadow: 1px 1px 1px #000;
 }
 
-.images-container {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.images-container figure {
-    width: 100%;
-    height: 100vw;
-    margin: 0;
-
-    @media all and (min-width: 480px) {
-        width: 50%;
-        height: 50vw;
-    }
-
-    @media all and (min-width: 768px) {
-        width: (1 / 3) * 100%;
-        height: (1 / 3) * 100vw;
-    }
-
-    @media all and (min-width: 1024px) {
-        width: 25%;
-        height: 25vw;
-    }
-}
-
-.images-container figure .image {
-    width: 100%;
-    height: 100%;
-    background-size: 100% auto;
+.banner-image {
+    background-image: url('../../../assets/images/gardens-pic.jpg');
     background-position: center;
-
-    @media all and (min-width: 1024px) {
-        filter: grayscale(100%) brightness(40%) blur(3px);
-    }
-}
-
-.images-container figure .image-overlay {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, .9) 100%);
-    position: absolute;
-    top: 0;
+    background-size: cover;
     width: 100%;
-    height: 100%;
-
-    @media all and (min-width: 1024px) {
-        display: none;
-    }
-}
-
-.images-container figure figcaption {
-    position: absolute;
-    bottom: 8px;
-    left: 8px;
-    font-size: 20px;
-
-    @media all and (min-width: 1024px) {
-        text-align: center;
-        width: 100%;
-        top: calc(50% - 30px);
-        padding: 15px;
-        line-height: 1.4;
-    }
-}
-
-.images-container figure {
-    @media all and (min-width: 1024px) {
-        &:hover .image,
-        &:focus .image {
-            filter: none;
-            background-size: 105% auto;
-        }
-
-        &:hover figcaption,
-        &:focus figcaption {
-            opacity: 0;
-        }
-    }
-}
-
-.need-something {
-    opacity: 0;
-    position: absolute;
-    bottom: 15px;
-    width: 100%;
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0;
-    padding-left: 15px;
-    padding-right: 15px;
-    animation-name: fadeSlideIn;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-    @media all and (min-width: 768px) {
-        font-size: 2.8rem;
-    }
-}
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    height: 50vw;
 }

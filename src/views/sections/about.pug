@@ -1,5 +1,5 @@
 
-.about
+.about#about
     .text-container
         .content.container
             h3.sf-appear I feel alive when I'm making things.
@@ -19,5 +19,11 @@
                 li #[i.fa-li.fa.fa-check-square-o] Web Applications, like this #[a(rel="noopener", target="_blank", title="Lumber Calculator", href="https://brentoncozby.com/projects/CareForce-Lumber-Calculator/") Lumber Calculator]
                 li #[i.fa-li.fa.fa-check-square-o] APIs, like this #[a(target="_blank", rel="noopener", title="Image Search API", href="https://brentoncozby.com/projects/FreeCodeCamp/image-search-fcc-cozby/") Image Search API]
             .spacer
-            p.sf-appear #[strong See more below...]
+            p.sf-appear #[strong See the responsive image grid below...]
             .spacer
+    .images-container
+        each description, src in htmlWebpackPlugin.options.images
+            figure
+                div.image(style=`background-image: url('${src}')`, title=description)
+                div.image-overlay
+                figcaption #{description.split('Brenton Cozby ')[1]}
