@@ -3,7 +3,7 @@
     "version": "3.0.0",
     "description": "Website for brentoncozby.com",
     "main": "src/index.js",
-    "repository": "https://github.com/BrentonCozby/brentoncozby.com.git",
+    "repository": "https://github.com/BrentonCozby/brentoncozby.com-v3.git",
     "author": "Brenton Cozby <brenton.cozby@gmail.com>",
     "license": "MIT",
     "scripts": {
