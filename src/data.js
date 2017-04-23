@@ -27,15 +27,15 @@ const creationsFeatured = [
     }, {
         title: 'Recipe App',
         description: 'React application that uses Firebase for the client-side database.',
-        'png': 'https://i.imgur.com/mI78pXY.jpg',
-        'gif': 'https://i.imgur.com/e52JDDd.gif',
+        'png': 'images/recipe-app.jpg',
+        'gif': 'images/recipe-app.jpg',
         'demo': 'https://brentoncozby.com/projects/FreeCodeCamp/fcc-recipe-app/',
         'code': 'https://github.com/BrentonCozby/fcc-recipe-app'
     }, {
         title: 'Youtube Clone',
         description: 'Youtube created with react, SASS, Webpack, and the Youtube API.',
-        'png': 'https://i.imgur.com/mI78pXY.jpg',
-        'gif': 'https://i.imgur.com/e52JDDd.gif',
+        'png': 'images/youtube-react.jpg',
+        'gif': 'images/youtube-react.jpg',
         'demo': 'https://brentoncozby.github.io/youtube-react',
         'code': 'https://github.com/BrentonCozby/youtube-react'
     }, {
