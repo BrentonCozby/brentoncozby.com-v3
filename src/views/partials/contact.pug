@@ -1,17 +1,19 @@
 #contact.contact
     #close.close(aria-label="Close the contact form") #[i.fa.fa-times-circle(aria-hidden="true")]
-    form#contact-form.contact-form
+    form#contact-form.contact-form(name="sentMessage", novalidate="")
         label(for="subject") Your Name
-        input#name(type="text", name="name" autofocus)
+        input#name(type="text", name="name", data-validation-required-message='Please enter your name.', autofocus)
 
         label(for="message") Message
-        textarea#message(name="message")
+        textarea#message(name="message", data-validation-required-message='Please enter a message.', required)
 
         label(for="email") Your Email
-        input#email(type="email", name="email" required)
+        input#email(type="email", name="email", data-validation-required-message='Please enter your email address.', required)
 
         label(for="email") Your Phone
-        input#phone(type="email", name="email" required)
+        input#phone(type="tel", name="phone")
+
+        #success
 
         button#send.send(type="submit")
             i.fa.fa-paper-plane-o(aria-hidden="true") Send

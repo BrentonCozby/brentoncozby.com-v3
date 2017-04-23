@@ -63,3 +63,12 @@
     font-size: 1.1rem;
     cursor: pointer;
 }
+
+#success {
+    padding: 8px 0;
+    margin-bottom: 15px;
+
+    .close {
+        display: none;
+    }
+}
