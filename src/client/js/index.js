@@ -45,8 +45,8 @@ $(document).ready(function() {
     function hideEverything() {
         $menuButton.removeClass('open');
         $menu.removeClass('revealed');
-        $contact.fadeOut(200);
-        $overlay.fadeOut(200);
+        $contact.removeClass('revealed');
+        $overlay.removeClass('revealed');
     }
 
     $overlay.click(hideEverything);

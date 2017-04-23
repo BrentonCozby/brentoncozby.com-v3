@@ -2,7 +2,7 @@ import './jqBootstrapValidation.js'
 
 $(function() {
 
-    $("#contactForm input, #contactForm textarea").jqBootstrapValidation({
+    $("#contact-form input, #contact-form textarea").jqBootstrapValidation({
         preventSubmit: true,
         submitError: function($form, event, errors) {
             // additional error messages or events
@@ -70,3 +70,20 @@ $(function() {
 $('#name').focus(function() {
     $('#success').html('');
 });
+
+const $contact = $('#contact')
+const $overlay = $('#overlay')
+const $menuButton = $('#menu-button')
+const $menu = $('#menu')
+
+$('.contact-btn').click(e => {
+    $contact.addClass('revealed')
+    $overlay.addClass('revealed')
+    $menuButton.removeClass('open')
+    $menu.removeClass('revealed')
+})
+
+$('#close').click(e => {
+    $contact.removeClass('revealed')
+    $overlay.removeClass('revealed')
+})

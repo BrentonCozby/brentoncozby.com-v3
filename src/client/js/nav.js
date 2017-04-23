@@ -1,17 +1,17 @@
 export default function() {
-    const $overlay = $('#overlay');
-    const $menuButton = $('#menu-button');
-    const $menu = $('#menu');
+    const $overlay = $('#overlay')
+    const $menuButton = $('#menu-button')
+    const $menu = $('#menu')
 
-    $menuButton.click(() => {
-        $overlay.fadeToggle(200);
-        $menuButton.toggleClass('open');
-        $menu.toggleClass('revealed');
-    });
+    $menuButton.click(e => {
+        $overlay.toggleClass('revealed')
+        $menuButton.toggleClass('open')
+        $menu.toggleClass('revealed')
+    })
 
-    $('.menu-a').click(() => {
-        $menuButton.removeClass('open');
-        $menu.removeClass('revealed');
-        $overlay.fadeOut(200);
-    });
+    $('.menu-a:not(.contact-btn)').click(e => {
+        $menuButton.removeClass('open')
+        $menu.removeClass('revealed')
+        $overlay.removeClass('revealed')
+    })
 }

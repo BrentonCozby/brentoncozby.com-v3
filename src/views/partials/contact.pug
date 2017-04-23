@@ -1,8 +1,8 @@
 #contact.contact
     #close.close(aria-label="Close the contact form") #[i.fa.fa-times-circle(aria-hidden="true")]
     form#contact-form.contact-form
-        label(for="subject") Subject
-        input#subject(type="text", name="subject" autofocus)
+        label(for="subject") Your Name
+        input#name(type="text", name="name" autofocus)
 
         label(for="message") Message
         textarea#message(name="message")
@@ -10,6 +10,8 @@
         label(for="email") Your Email
         input#email(type="email", name="email" required)
 
+        label(for="email") Your Phone
+        input#phone(type="email", name="email" required)
+
         button#send.send(type="submit")
-            i.fa.fa-paper-plane-o(aria-hidden="true")
-            | &nbsp; Send
+            i.fa.fa-paper-plane-o(aria-hidden="true") Send
