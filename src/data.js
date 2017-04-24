@@ -22,14 +22,14 @@ const creationsFeatured = [
         description: 'Optimizes lumber orders and generates cut lists for various City Year Care Force schematics.',
         'png': 'https://i.imgur.com/mI78pXY.jpg',
         'gif': 'https://i.imgur.com/e52JDDd.gif',
-        'demo': 'https://brentoncozby.com/projects/CareForce-Lumber-Calculator/',
+        'demo': 'https://brentoncozby.com/CareForce-Lumber-Calculator/',
         'code': 'https://github.com/BrentonCozby/CareForce-Lumber-Calculator'
     }, {
         title: 'Recipe App',
         description: 'React application that uses Firebase for the client-side database.',
         'png': 'images/recipe-app.jpg',
         'gif': 'images/recipe-app.jpg',
-        'demo': 'https://brentoncozby.com/projects/FreeCodeCamp/fcc-recipe-app/',
+        'demo': 'https://brentoncozby.com/free-code-camp/fcc-recipe-app/',
         'code': 'https://github.com/BrentonCozby/fcc-recipe-app'
     }, {
         title: 'Youtube Clone',
@@ -43,7 +43,7 @@ const creationsFeatured = [
         description: 'Organize your favorite quotes in a beautiful Pinterest-style layout.',
         'png': 'https://i.imgur.com/Jc6GlD6.png',
         'gif': 'https://i.imgur.com/FM2GSEV.gif',
-        'demo': 'https://brentoncozby.com/projects/quote-collage/',
+        'demo': 'https://brentoncozby.com/quote-collage/',
         'code': 'https://github.com/BrentonCozby/quote-collage'
     }, {
         title: 'tech.fvi.edu',
@@ -57,14 +57,14 @@ const creationsFeatured = [
         description: 'Returns JSON data for images based on the query string parameters.',
         'png': 'images/image-search-api.png',
         'gif': 'images/image-search-api.png',
-        'demo': 'https://brentoncozby.com/projects/FreeCodeCamp/image-search-fcc-cozby/',
+        'demo': 'https://brentoncozby.com/free-code-camp/image-search-fcc-cozby/',
         'code': 'https://github.com/BrentonCozby/image-search-fcc-cozby'
     }, {
         title: 'Simon Game from the 80s',
         description: 'It really is that simon game from the 80s.',
         'png': 'images/simon-game.png',
         'gif': 'images/simon-game.png',
-        'demo': 'https://brentoncozby.com/projects/FreeCodeCamp/simon-game-fcc/',
+        'demo': 'https://brentoncozby.com/free-code-camp/simon-game-fcc/',
         'code': 'https://github.com/BrentonCozby/simon-game-fcc'
     }
 ];
