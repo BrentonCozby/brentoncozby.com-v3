@@ -57,7 +57,7 @@ const creationsFeatured = [
         description: 'Returns JSON data for images based on the query string parameters.',
         'png': 'images/image-search-api.png',
         'gif': 'images/image-search-api.png',
-        'demo': 'https://brentoncozby.com/free-code-camp/image-search-fcc-cozby/',
+        'demo': 'http://image-search-fcc-cozby.herokuapp.com/',
         'code': 'https://github.com/BrentonCozby/image-search-fcc-cozby'
     }, {
         title: 'Simon Game from the 80s',
