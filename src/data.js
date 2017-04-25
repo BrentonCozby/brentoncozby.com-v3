@@ -46,7 +46,7 @@ const creationsFeatured = [
         'demo': 'https://brentoncozby.com/quote-collage/',
         'code': 'https://github.com/BrentonCozby/quote-collage'
     }, {
-        title: 'tech.fvi.edu',
+        title: 'Techlaunch',
         description: 'Vanilla-JS SPA for the Techlaunch Coding School at the Florida Vocational Institute.',
         'png': 'images/tech.fvi.edu.png',
         'gif': 'images/tech.fvi.edu.png',

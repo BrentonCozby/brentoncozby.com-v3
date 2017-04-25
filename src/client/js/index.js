@@ -26,7 +26,8 @@ if (process.env.NODE_ENV === 'development') {
     require('../../views/partials/contact.pug')
     require('../../views/partials/footer.pug')
     require('../../views/partials/nav.pug')
-    require('../../views/sections/about.pug')
+    require('../../views/sections/story.pug')
+    require('../../views/sections/timeline.pug')
     require('../../views/sections/above-the-fold.pug')
     require('../../views/sections/portfolio.pug')
 }

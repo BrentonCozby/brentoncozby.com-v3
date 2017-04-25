@@ -1,4 +1,4 @@
-#portfolio.portfolio.container
+#portfolio.portfolio
     h2.portfolio-title Featured Creations
     .creations
         each creation in htmlWebpackPlugin.options.creationsFeatured
@@ -10,4 +10,3 @@
                 .card-buttons-container
                     a(href= creation.demo, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.card-demo View Live]
                     a(href= creation.code, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.card-code View Code]
-    //- a.view-all-creations-btn(href="/creations" title="Brenton Cozby's creations") View All Creations
