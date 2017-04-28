@@ -8,7 +8,7 @@ const creationsFeatured = [
         description: 'Website for Rally Point Webinars. Uses Webpack, SASS, Pug, custom animations, and jQuery.',
         'png': 'images/rally-point-webinars.jpg',
         'gif': 'images/rally-point-webinars.jpg',
-        'demo': 'http://thinkrallypointwebinars.com',
+        'demo': 'http://rallypointwebinars.com',
         'code': 'https://github.com/BrentonCozby/rally-point-webinars'
     }, {
         title: 'FVI Continuing Eduation',
