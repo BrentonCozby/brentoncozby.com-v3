@@ -6,66 +6,77 @@ const creationsFeatured = [
     {
         title: 'Rally Point Webinars',
         description: 'Website for Rally Point Webinars. Uses Webpack, SASS, Pug, custom animations, and jQuery.',
-        'png': 'images/rally-point-webinars.jpg',
-        'gif': 'images/rally-point-webinars.jpg',
-        'demo': 'http://rallypointwebinars.com',
-        'code': 'https://github.com/BrentonCozby/rally-point-webinars'
+        tools: ['Webpack', 'Pug', 'SASS', 'jQuery'],
+        jpg: 'images/rally-point-webinars.jpg',
+        demo: 'http://rallypointwebinars.com',
+        code: 'https://github.com/BrentonCozby/rally-point-webinars',
+        date: 'April 2017'
     }, {
         title: 'FVI Continuing Eduation',
         description: 'Website for Continuing Eduation department at the Florida Vocational Institute.',
-        'png': 'images/continuing-education.jpg',
-        'gif': 'images/continuing-education.jpg',
-        'demo': 'https://fvitech.github.io/continuing-education',
-        'code': 'https://github.com/fvitech/continuing-education'
+        tools: ['Webpack', 'Pug', 'SASS', 'jQuery'],
+        jpg: 'images/continuing-education.jpg',
+        demo: 'https://fvitech.github.io/continuing-education',
+        code: 'https://github.com/fvitech/continuing-education',
+        date: 'March 2017'
     }, {
         title: 'Lumber Calculator',
         description: 'Optimizes lumber orders and generates cut lists for various City Year Care Force schematics.',
-        'png': 'https://i.imgur.com/mI78pXY.jpg',
-        'gif': 'https://i.imgur.com/e52JDDd.gif',
+        tools: ['Browserify', 'Pug', 'SASS', 'jQuery'],
+        jpg: 'images/lumber-calculator.jpg',
+        gif: 'https://i.imgur.com/e52JDDd.gif',
         'demo': 'https://brentoncozby.com/CareForce-Lumber-Calculator/',
-        'code': 'https://github.com/BrentonCozby/CareForce-Lumber-Calculator'
+        code: 'https://github.com/BrentonCozby/CareForce-Lumber-Calculator',
+        date: 'June 2016'
     }, {
         title: 'Recipe App',
         description: 'React application that uses Firebase for the client-side database.',
-        'png': 'images/recipe-app.jpg',
-        'gif': 'images/recipe-app.jpg',
-        'demo': 'https://brentoncozby.com/free-code-camp/fcc-recipe-app/',
-        'code': 'https://github.com/BrentonCozby/fcc-recipe-app'
+        tools: ['React', 'create-react-app', 'Firebase', 'Express'],
+        jpg: 'images/recipe-app.jpg',
+        demo: 'https://brentoncozby.com/free-code-camp/fcc-recipe-app/',
+        code: 'https://github.com/BrentonCozby/fcc-recipe-app',
+        date: 'December 2016'
     }, {
         title: 'Youtube Clone',
         description: 'Youtube created with react, SASS, Webpack, and the Youtube API.',
-        'png': 'images/youtube-react.jpg',
-        'gif': 'images/youtube-react.jpg',
-        'demo': 'https://brentoncozby.github.io/youtube-react',
-        'code': 'https://github.com/BrentonCozby/youtube-react'
+        tools: ['React', 'Webpack', 'SASS', 'Youtube API'],
+        jpg: 'images/youtube-react.jpg',
+        demo: 'https://brentoncozby.github.io/youtube-react',
+        code: 'https://github.com/BrentonCozby/youtube-react',
+        date: ''
     }, {
         title: 'Quote Collage',
         description: 'Organize your favorite quotes in a beautiful Pinterest-style layout.',
-        'png': 'https://i.imgur.com/Jc6GlD6.png',
-        'gif': 'https://i.imgur.com/FM2GSEV.gif',
+        tools: ['React', 'create-react-app', 'Firebase', 'Express'],
+        jpg: 'images/quote-collage.jpg',
+        gif: 'https://i.imgur.com/FM2GSEV.gif',
         'demo': 'https://brentoncozby.com/quote-collage/',
-        'code': 'https://github.com/BrentonCozby/quote-collage'
+        code: 'https://github.com/BrentonCozby/quote-collage',
+        date: 'November 2016'
     }, {
         title: 'Techlaunch',
         description: 'Vanilla-JS SPA for the Techlaunch Coding School at the Florida Vocational Institute.',
-        'png': 'images/tech.fvi.edu.png',
-        'gif': 'images/tech.fvi.edu.png',
-        'demo': 'http://tech.fvi.edu/#/web-developer-program',
-        'code': 'https://github.com/FVITech/tech-fvi-edu'
+        tools: ['Browserify', 'SASS'],
+        jpg: 'images/techlaunch.jpg',
+        demo: 'http://tech.fvi.edu/#/web-developer-program',
+        code: 'https://github.com/FVITech/tech-fvi-edu',
+        date: 'November 2016'
     }, {
         title: 'Image Search API',
         description: 'Returns JSON data for images based on the query string parameters.',
-        'png': 'images/image-search-api.png',
-        'gif': 'images/image-search-api.png',
-        'demo': 'http://image-search-fcc-cozby.herokuapp.com/',
-        'code': 'https://github.com/BrentonCozby/image-search-fcc-cozby'
+        tools: ['Browserify', 'Express', 'EJS', 'Google APIs', 'SASS', 'Mongo DB'],
+        jpg: 'images/image-search-api.jpg',
+        demo: 'http://image-search-fcc-cozby.herokuapp.com/',
+        code: 'https://github.com/BrentonCozby/image-search-fcc-cozby',
+        date: 'January 2017'
     }, {
         title: 'Simon Game from the 80s',
         description: 'It really is that simon game from the 80s.',
-        'png': 'images/simon-game.png',
-        'gif': 'images/simon-game.png',
-        'demo': 'https://brentoncozby.com/free-code-camp/simon-game-fcc/',
-        'code': 'https://github.com/BrentonCozby/simon-game-fcc'
+        tools: ['Browersify', 'SASS', 'Express'],
+        jpg: 'images/simon-game.png',
+        demo: 'https://brentoncozby.com/free-code-camp/simon-game-fcc/',
+        code: 'https://github.com/BrentonCozby/simon-game-fcc',
+        date: 'January 2017'
     }
 ];
 

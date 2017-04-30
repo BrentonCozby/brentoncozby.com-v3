@@ -52,15 +52,12 @@ $(document).ready(function() {
 
     $overlay.click(hideEverything);
 
-    $('.card-image').each(function() {
-        $(this).css('background-image', `url(${$(this).attr('data-png')})`);
-    });
+    $('.teaser').click(e => {
+        const modalId = e.currentTarget.dataset.modal
+        $(`#${modalId}`).addClass('open')
+    })
 
-    $('.card-image').mouseover(function() {
-        $(this).css('background-image', `url(${$(this).attr('data-gif')})`);
-    });
-
-    $('.card-image').mouseleave(function() {
-        $(this).css('background-image', `url(${$(this).attr('data-png')})`);
-    });
+    $('.creation-modal-close').click(e => {
+        $(e.currentTarget).parent().removeClass('open')
+    })
 });
