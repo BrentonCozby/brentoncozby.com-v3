@@ -1,9 +1,8 @@
 import './contact_me.js'
 
-import pluginsInit from './plugins';
-import navInit from './nav';
-import smoothScrollInit from './smoothScroll';
-import scrollfireInit from './scrollfire';
+import navInit from './nav'
+import smoothScrollInit from './smoothScroll'
+import scrollfireInit from './scrollfire'
 
 import '../scss/index.scss'
 
@@ -13,8 +12,8 @@ if (process.env.NODE_ENV === 'development') {
     // const { resolve } = require('path')
     //
     // glob.sync( '../views/**/*.pug' ).forEach( function( view ) {
-    //   require( resolve( view ) );
-    // });
+    //   require( resolve( view ) )
+    // })
 
     // pages
     require('../../views/pages/index.pug')
@@ -33,24 +32,24 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 $(document).ready(function() {
-    pluginsInit();
-    navInit();
-    smoothScrollInit();
-    scrollfireInit();
+    navInit()
+    smoothScrollInit()
+    scrollfireInit()
 
-    const $overlay = $('#overlay');
-    const $menuButton = $('#menuButton');
-    const $menu = $('#menu');
-    const $contact = $('#contact');
+    const $overlay = $('#overlay')
+    const $menuButton = $('#menuButton')
+    const $menu = $('#menu')
+    const $contact = $('#contact')
+    const $portfolio = $('#portfolio')
 
     function hideEverything() {
-        $menuButton.removeClass('open');
-        $menu.removeClass('revealed');
-        $contact.removeClass('revealed');
-        $overlay.removeClass('revealed');
+        $menuButton.removeClass('open')
+        $menu.removeClass('revealed')
+        $contact.removeClass('revealed')
+        $overlay.removeClass('revealed')
     }
 
-    $overlay.click(hideEverything);
+    $overlay.click(hideEverything)
 
     $('.teaser').click(e => {
         const modalId = e.currentTarget.dataset.modal
@@ -60,4 +59,4 @@ $(document).ready(function() {
     $('.creation-modal-close').click(e => {
         $(e.currentTarget).parent().removeClass('open')
     })
-});
+})

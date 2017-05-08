@@ -4,6 +4,14 @@ const creations = [];
 // title, description, png-src, gif-src, demo-link, code-link
 const creationsFeatured = [
     {
+        title: 'Techlaunch Blog',
+        description: 'A single-page blogging application with a UI like a magazine and a WYSIWYG editor.',
+        tools: ['React', 'Redux', 'Firebase', 'Froala-editor', 'Webpack', 'SASS'],
+        jpg: 'images/blog-react-redux.jpg',
+        demo: 'https://brentoncozby.com/blog-react-redux',
+        code: 'https://github.com/BrentonCozby/blog-react-redux',
+        date: 'April 2017'
+    }, {
         title: 'Rally Point Webinars',
         description: 'Website for Rally Point Webinars. Uses Webpack, SASS, Pug, custom animations, and jQuery.',
         tools: ['Webpack', 'Pug', 'SASS', 'jQuery'],
