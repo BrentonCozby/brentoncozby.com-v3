@@ -83,17 +83,16 @@
 
 .creation-modal {
     opacity: 0;
-    top: -110%;
-    position: fixed;
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100%;
     background-color: #fff;
     z-index: -10;
     transition: all 400ms;
 
     &.open {
         opacity: 1;
-        top: 0;
         z-index: 1000;
     }
 
@@ -112,6 +111,34 @@
         @media all and (min-width: 992px) {
             font-size: 42px;
             margin-bottom: 40px;
+        }
+    }
+
+    .close-btn {
+        display: block;
+        margin: 60px auto;
+        padding: 10px 20px;
+        border: none;
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        font-weight: bolder;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .5);
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transform: translateY(-2px);
+
+        &:hover,
+        &:focus {
+            background-color: orange;
+            outline: none;
+        }
+
+        &:active {
+            transition: all 0s;
+            box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .4);
+            transform: translateY(0px);
         }
     }
 }
@@ -135,7 +162,8 @@
     &:hover .line2,
     &:focus .line1,
     &:focus .line2, {
-        height: 2px;
+        height: 3px;
+        box-shadow: 0 0 4px 0 #000;
     }
 
     .line1 {
@@ -216,18 +244,28 @@
     }
 
     a {
-        background-color: #ddd;
+        background-color: #fff;
         text-transform: uppercase;
         padding: 10px 15px;
         letter-spacing: 2px;
         text-decoration: none;
         font-size: 12px;
+        box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .6);
+        border: 2px solid #111;
+        transform: translateY(-2px);
         color: #000;
+        font-weight: bolder;
 
         &:hover,
         &:focus {
             background-color: orange;
-            color: #fff;
+            border-color: #111;
+        }
+
+        &:active {
+            transition: all 0s;
+            box-shadow: 0 2px 3px -2px rgba(0, 0, 0, .4);
+            transform: translateY(0px);
         }
 
         &:first-of-type {

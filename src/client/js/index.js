@@ -56,7 +56,7 @@ $(document).ready(function() {
         $(`#${modalId}`).addClass('open')
     })
 
-    $('.creation-modal-close').click(e => {
-        $(e.currentTarget).parent().removeClass('open')
+    $('.creation-modal-close, .close-btn').click(e => {
+        $(e.currentTarget).closest('.open').removeClass('open')
     })
 })

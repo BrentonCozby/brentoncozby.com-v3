@@ -1,6 +1,6 @@
 #portfolio.portfolio
     h2.portfolio-title Featured Creations
-    .creation-teasers
+    .creation-teasers#creation-teasers
         each creation, index in htmlWebpackPlugin.options.creationsFeatured
             .teaser(data-modal=id=`creation-modal-${index}`)
                 .teaser-image(style=`background-image: url(${creation.jpg})` title= "Brenton Cozby's " + creation.title)
@@ -23,3 +23,4 @@
                 .creation-modal-buttons
                     a(href= creation.demo, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.creation-demo View Live]
                     a(href= creation.code, title= "Brenton Cozby's " + creation.title, target="_blank", rel="noopener") #[.creation-code View Code]
+                button.close-btn x&nbsp;&nbsp;close project
