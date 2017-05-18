@@ -133,6 +133,8 @@
         &:focus {
             background-color: orange;
             outline: none;
+            transform: translateY(-4px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .8);
         }
 
         &:active {
@@ -169,7 +171,7 @@
     .line1 {
         display: block;
         width: 135%;
-        height: 1px;
+        height: 2px;
         background-color: #aaa;
         transform-origin: 0 100%;
         transform: rotate(45deg);
@@ -255,11 +257,14 @@
         transform: translateY(-2px);
         color: #000;
         font-weight: bolder;
+        transition-delay: 0s;
 
         &:hover,
         &:focus {
             background-color: orange;
             border-color: #111;
+            transform: translateY(-3px);
+            box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .8);
         }
 
         &:active {
