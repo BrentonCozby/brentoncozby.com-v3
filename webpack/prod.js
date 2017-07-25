@@ -1,10 +1,7 @@
 import {
-    HashedModuleIdsPlugin,
     optimize
 } from 'webpack'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import ChunkManifestPlugin from "chunk-manifest-webpack-plugin"
-import WebpackChunkHash from "webpack-chunk-hash"
 import ResourceHintsPlugin from 'resource-hints-webpack-plugin'
 import FaviconsPlugin from 'favicons-webpack-plugin'
 import { resolve } from 'path'
@@ -19,8 +16,8 @@ export default {
         ]
     },
     output: {
-        filename: 'js/[name].[chunkhash].js',
-        chunkFilename: 'js/[name].[chunkhash].js'
+        filename: 'js/[name].js',
+        chunkFilename: 'js/[name].js'
     },
     module: {
         rules: [
@@ -59,9 +56,6 @@ export default {
                             name: '[name].[ext]',
                             outputPath: 'images/'
                         }
-                    }, {
-                        loader: 'image-webpack-loader',
-                        options: {}
                     }
                 ]
             }
@@ -69,7 +63,7 @@ export default {
     },
     plugins: [
         new FaviconsPlugin(resolve(Dir.images, 'b-icon.png')),
-        new ExtractTextPlugin('style.[chunkhash].css'),
+        new ExtractTextPlugin('style.css'),
         new optimize.CommonsChunkPlugin({
             name: 'vendor',
             minChunks: function (module) {
@@ -80,12 +74,6 @@ export default {
             name: 'manifest',
             minChunks: Infinity
         }),
-        new ChunkManifestPlugin({
-            filename: "chunk-manifest.json",
-            manifestVariable: "webpackManifest"
-        }),
-        new ResourceHintsPlugin(),
-        new HashedModuleIdsPlugin(),
-        new WebpackChunkHash()
+        new ResourceHintsPlugin()
     ]
 }

@@ -4,8 +4,24 @@ const creations = [];
 // title, description, png-src, gif-src, demo-link, code-link
 const creationsFeatured = [
     {
-        title: 'Techlaunch Blog',
-        description: 'A single-page blogging application with a UI like a magazine and a WYSIWYG editor.',
+        title: 'Techlaunch.io',
+        description: 'Website for the Techlaunch Coding and IT School in Miami, FL.',
+        tools: ['PHP', 'SASS', 'Webpack', 'NodeJS', 'jQuery'],
+        jpg: 'images/techlaunch.jpg',
+        demo: 'https://techlaunch.io',
+        code: 'https://github.com/FVItech/Techlaunch.io',
+        date: 'June 2017'
+    }, {
+        title: 'Myocortex',
+        description: 'Website for Myocortex Human Performance Systems in Miami, FL. I created the Webpack 2 configurations from scratch. Webpack is controlling the entire build process, from development to production. The animations are built from scratch without any libraries.',
+        tools: ['Pug', 'SASS', 'Webpack', 'jQuery'],
+        jpg: 'images/myocortex.jpg',
+        demo: 'http://www.myocortex.com',
+        code: 'https://github.com/BrentonCozby/myocortex-website',
+        date: 'June 2017'
+    }, {
+        title: 'Blog React App',
+        description: 'A single-page blogging application with a UI like a magazine and a WYSIWYG editor. Full-stack CRUD app using REST APIs.',
         tools: ['React', 'Redux', 'Firebase', 'Froala-editor', 'Webpack', 'SASS'],
         jpg: 'images/blog-react-redux.jpg',
         demo: 'https://brentoncozby.com/blog-react-redux',
@@ -13,8 +29,8 @@ const creationsFeatured = [
         date: 'April 2017'
     }, {
         title: 'Rally Point Webinars',
-        description: 'Website for Rally Point Webinars. Uses Webpack, SASS, Pug, custom animations, and jQuery.',
-        tools: ['Webpack', 'Pug', 'SASS', 'jQuery'],
+        description: 'Website for Rally Point Webinars. Build tools created and customized with NodeJS, including EJS compilation, CSS/HTML/JS minification, filename hashing for cache-busting, service worker integration, and responsive polyfills from polyfill.io.',
+        tools: ['EJS', 'SASS', 'jQuery', 'Webpack', 'NodeJS'],
         jpg: 'images/rally-point-webinars.jpg',
         demo: 'http://rallypointwebinars.com',
         code: 'https://github.com/BrentonCozby/rally-point-webinars',
@@ -60,14 +76,6 @@ const creationsFeatured = [
         gif: 'https://i.imgur.com/FM2GSEV.gif',
         'demo': 'https://brentoncozby.com/quote-collage/',
         code: 'https://github.com/BrentonCozby/quote-collage',
-        date: 'November 2016'
-    }, {
-        title: 'Techlaunch',
-        description: 'Vanilla-JS SPA for the Techlaunch Coding School at the Florida Vocational Institute.',
-        tools: ['Browserify', 'SASS'],
-        jpg: 'images/techlaunch.jpg',
-        demo: 'http://tech.fvi.edu/#/web-developer-program',
-        code: 'https://github.com/FVITech/tech-fvi-edu',
         date: 'November 2016'
     }, {
         title: 'Image Search API',

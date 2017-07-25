@@ -15,7 +15,7 @@ const env = (TARGET === 'dev') ? 'dev' : 'prod'
 let common = {
     output: {
         path: Dir.dist,
-        publicPath: ''
+        publicPath: '/'
     },
     module: {
         rules: [
