@@ -1,5 +1,5 @@
 import { resolve } from 'path'
-import { DefinePlugin, NoEmitOnErrorsPlugin } from 'webpack'
+import { DefinePlugin } from 'webpack'
 import merge from 'webpack-merge'
 import HtmlPlugin from 'html-webpack-plugin'
 import CopyPlugin from 'copy-webpack-plugin'
@@ -57,17 +57,8 @@ let common = {
             {from: resolve(Dir.client, 'humans.txt')},
             {from: resolve(Dir.client, 'robots.txt')},
             {
-                from: Dir.images,
-                to: resolve(Dir.dist, 'images'),
-                flatten: true
-            },
-            {
                 from: resolve(Dir.client, 'mail', 'contact_me.php'),
                 to: resolve(Dir.dist, 'mail')
-            },
-            {
-                from: resolve(Dir.client, 'vendor', 'jquery.scrollfire.min.js'),
-                to: resolve(Dir.dist, 'js')
             }
         ])
     ],

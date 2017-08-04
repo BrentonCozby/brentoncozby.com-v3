@@ -1,5 +1,5 @@
 // plugins
-@import "_normalize";
+@import "normalize";
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
 $main-font: 'Ubuntu', sans-serif;
@@ -13,16 +13,17 @@ body {
     font-family: $main-font;
 }
 
-@import "_helpers";
+@import "helpers";
+@import "animations";
 
 // content
-@import "_contact";
-@import "nav/_nav";
-@import "_above-the-fold";
-@import "_images-container";
-@import "_timeline";
-@import "_story";
-@import "_portfolio";
-@import "_footer";
+@import "contact";
+@import "nav/nav";
+@import "above-the-fold";
+@import "images-container";
+@import "timeline";
+@import "story";
+@import "portfolio";
+@import "footer";
 
-@import "_404";
+@import "404";

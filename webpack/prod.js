@@ -63,7 +63,7 @@ export default {
     },
     plugins: [
         new FaviconsPlugin({
-            logo: resolve(Dir.images, 'b-icon.png'),
+            logo: resolve(Dir.root, 'b-icon.png'),
             background: '#eee',
             title: 'brentoncozby.com',
             icons: {

@@ -6,7 +6,7 @@ export default function() {
             if (target.length) {
                 $('html, body').animate({
                     scrollTop: target.offset().top
-                }, 400, 'easeInOutQuart');
+                }, 700);
                 return false;
             }
         }

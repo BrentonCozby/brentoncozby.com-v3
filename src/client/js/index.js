@@ -1,8 +1,8 @@
 import './contact_me.js'
+import './scroll-animations.js'
 
 import navInit from './nav'
 import smoothScrollInit from './smoothScroll'
-import scrollfireInit from './scrollfire'
 
 import '../scss/index.scss'
 
@@ -34,7 +34,6 @@ if (process.env.NODE_ENV === 'development') {
 $(document).ready(function() {
     navInit()
     smoothScrollInit()
-    scrollfireInit()
 
     const $overlay = $('#overlay')
     const $menuButton = $('#menuButton')
