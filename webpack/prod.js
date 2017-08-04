@@ -62,7 +62,23 @@ export default {
         ]
     },
     plugins: [
-        new FaviconsPlugin(resolve(Dir.images, 'b-icon.png')),
+        new FaviconsPlugin({
+            logo: resolve(Dir.images, 'b-icon.png'),
+            background: '#eee',
+            title: 'brentoncozby.com',
+            icons: {
+                android: true,
+                appleIcon: true,
+                appleStartup: true,
+                coast: false,
+                favicons: true,
+                firefox: true,
+                opengraph: true,
+                twitter: true,
+                yandex: false,
+                windows: true
+            }
+        }),
         new ExtractTextPlugin('style.css'),
         new optimize.CommonsChunkPlugin({
             name: 'vendor',
