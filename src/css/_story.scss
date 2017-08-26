@@ -1,0 +1,74 @@
+.story .text-container {
+    width: 100%;
+    color: #111;
+    background-color: #f7f7f7;
+    @media all and (min-width: 1200px) {
+        min-width: calc(100% - 600px);
+    }
+}
+
+.story .content {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    text-align: left;
+    @media all and (min-width: 768px) {
+        max-width: 550px;
+    }
+
+    @media all and (min-height: 750px) {
+        padding-top: 150px;
+    }
+
+    h3 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
+
+    .spacer {
+        margin-top: 120px;
+        content: '';
+
+        @media all and (min-height: 750px) {
+            margin-top: 160px;
+        }
+    }
+}
+
+.cake-figure {
+    max-width: 300px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 3px;
+    background-color: #fff;
+    margin: 20px;
+
+    img {
+        width: 100%;
+    }
+
+    figcaption {
+        text-align: center;
+        font-size: 0.9rem;
+        padding: 6px 0 4px;
+    }
+}
+
+.things-i-make {
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 20px 0;
+    margin-left: 30px;
+    list-style-type: none;
+
+    li {
+        margin: 30px 0;
+    }
+}
+
+.story * {
+    transition: all 1s;
+}

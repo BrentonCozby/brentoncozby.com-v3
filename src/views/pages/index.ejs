@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include(`${partials}/head`, {pageTitle: 'Home'}); -%>
+<body>
+
+    <%- include(`${partials}/contact`); -%>
+    <%- include(`${partials}/nav`); -%>
+
+    <div class="landing-container">
+        <div class="banner-image"></div>
+    </div>
+
+    <div id="portfolio" class="portfolio">
+        <h2 class="portfolio-title">Featured Creations</h2>
+
+        <div id="creation-teasers" class="creation-teasers">
+            <% creationsFeatured.forEach((creation, index) => { %>
+            <div class="teaser" data-modal="creation-modal-<%= index %>">
+                <div class="teaser-image" style="background-image: url(<%= creation.jpg %>)" title="Brenton Cozby's <%= creation.title %>" alt="Brenton Cozby's <%= creation.title %>">
+                    <div class="teaser-overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+                <h3 class="teaser-title"><%= creation.title %></h3>
+            </div>
+            <% }) %>
+        </div>
+
+        <% creationsFeatured.forEach((creation, index) => { %>
+        <div class="creation-modal" id="creation-modal-<%= index %>">
+            <div class="creation-modal-close">
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            <h3 class="creation-modal-title"><%= creation.title %></h3>
+            <div class="creation-modal-details">
+                <div class="creation-modal-image" style="background-image: url(<%= creation.gif || creation.jpg %>);" title="Brenton Cozby's <%= creation.title %>" alt="Brenton Cozby's <%= creation.title %>"></div>
+                <p class="creation-description"><%= creation.description %></p>
+                <h3 class="tools-title">Tools</h3>
+                <ul class="tools">
+                    <% creation.tools.forEach(tool => { %>
+                    <li><%= tool %></li>
+                    <% }) %>
+                </ul>
+                <div class="creation-modal-buttons">
+                    <a href="<%= creation.demo %>" title="Brenton Cozby's <%= creation.title %>" target="_blank" rel="noopener">
+                        <div class="creation-demo">View Live</div>
+                    </a>
+                    <a href="<%= creation.code %>" title="Brenton Cozby's <%= creation.title %>" target="_blank" rel="noopener">
+                        <div class="creation-code">View Code</div>
+                    </a>
+                </div>
+                <button class="close-btn">x&nbsp;&nbsp;close project</button>
+            </div>
+        </div>
+        <% }) %>
+    </div>
+
+    <div id="timeline" class="timeline">
+        <div class="content">
+            <div class="timeline-title">Timeline</div>
+            <div class="item">
+                <div class="date">1992</div>
+                <div class="caption">Born in Maryland</div>
+            </div>
+            <div class="item">
+                <div class="date">1997</div>
+                <div class="caption">Got my first crush</div>
+            </div>
+            <div class="item">
+                <div class="date">1999</div>
+                <div class="caption">Got my first computer</div>
+            </div>
+            <div class="item">
+                <div class="date">2000</div>
+                <div class="caption">Joined traveling baseball and soccer teams</div>
+            </div>
+            <div class="item">
+                <div class="date">2001</div>
+                <div class="caption">Began learning the saxophone</div>
+            </div>
+            <div class="item">
+                <div class="date">2007</div>
+                <div class="caption">Too shy to dance with homecoming date</div>
+            </div>
+            <div class="item">
+                <div class="date">2008</div>
+                <div class="caption">First girlfriend</div>
+            </div>
+            <div class="item">
+                <div class="date">2010</div>
+                <div class="caption">Graduated High School</div>
+            </div>
+            <div class="item">
+                <div class="date">2010</div>
+                <div class="caption">Began College at the University of Miami (UM)</div>
+            </div>
+            <div class="item">
+                <div class="date">2014</div>
+                <div class="caption">Earned B.A. in Psychology from UM</div>
+            </div>
+            <div class="item">
+                <div class="date">2014</div>
+                <div class="caption">Began City Year in Miami, an AmeriCorps program</div>
+            </div>
+            <div class="item">
+                <div class="date">2016</div>
+                <div class="caption">Began learning how to code</div>
+            </div>
+            <div class="item">
+                <div class="date">2017</div>
+                <div class="caption">Got my first client as a Web Developer</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="story" class="story">
+        <div class="text-container">
+            <div class="content container">
+                <h3 class="appear">I like making things.</h3>
+                <div class="spacer"></div>
+                <p class="appear">You could ask me to make you a cake and I'd make you my best cake.</p>
+                <div class="spacer"></div>
+                <figure class="cake-figure appear"><img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/making-cake.jpg" title="Brenton Cozby making a cake" alt="Brenton Cozby making a cake" class="my-best-cakesrc" />
+                    <figcaption>It's been a while since I made a cake.</figcaption>
+                </figure>
+                <div class="spacer"></div>
+                <p class="appear">I'm not that good at making cakes, but...</p>
+                <div class="spacer"></div>
+                <h3 class="appear">I enjoy making these:</h3>
+                <div class="spacer"></div>
+                <ul class="things-i-make appear fa-ul">
+                    <li>
+                        <i class="fa-li fa fa-check-square-o"></i>
+                        Websites, such as this very one. <a href="https://github.com/BrentonCozby/brentoncozby.com" target="_blank" rel="noopener" title="GitHub repo for brentoncozby.com">View the Code</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check-square-o"></i>
+                        Web Applications, like this <a rel="noopener" target="_blank" title="Lumber Calculator" href="https://brentoncozby.com/CareForce-Lumber-Calculator/">Lumber Calculator</a>
+                    </li>
+                    <li>
+                        <i class="fa-li fa fa-check-square-o"></i>
+                        APIs, like this <a target="_blank" rel="noopener" title="Image Search API"href="http://image-search-fcc-cozby.herokuapp.com/">Image Search API</a>
+                    </li>
+                </ul>
+                <div class="spacer"></div>
+                <p class="appear"><strong>I also enjoy some CSS.</strong></p>
+                <p class="appear"><strong>Check out the responsive image grid below...</strong></p>
+                <div class="spacer"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="images-container">
+        <% const imageUrls = Object.keys(images) %>
+        <% imageUrls.forEach(url => { %>
+        <figure>
+            <div class="image" style="background-image: url(<%= url %>)" title="<%= images[url] %>"></div>
+            <div class="image-overlay"></div>
+            <figcaption><%= images[url].split('Brenton Cozby ')[1] %></figcaption>
+        </figure>
+        <% }) %>
+    </div>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>
