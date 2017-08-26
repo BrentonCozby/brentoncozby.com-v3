@@ -1,14 +1,14 @@
 {
-  "name": "Static Boilerplate EJS-SASS",
-  "short_name": "Static Boilerplate EJS-SASS",
-  "description": "Boilerplate for a Static website using EJS and SASS",
+  "name": "Brenton Cozby",
+  "short_name": "Brenton Cozby",
+  "description": "Hello! I am a software developer. This website is a portfolio of my work.",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",
   "orientation": "portrait",
   "start_url": "/?homescreen=1",
-  "background_color": "#111",
-  "theme_color": "#111",
+  "background_color": "#FFF",
+  "theme_color": "#FFF",
   "icons": [
     {
       "src": "/images/favicons/android-chrome-36x36.png",

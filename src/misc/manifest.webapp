@@ -1,7 +1,7 @@
 {
   "version": "1.0",
-  "name": "Static Boilerplate EJS-SASS",
-  "description": "Boilerplate for a Static website using EJS and SASS",
+  "name": "Brenton Cozby",
+  "description": "Hello! I am a software developer. This website is a portfolio of my work.",
   "icons": {
     "60": "/images/favicons/firefox_app_60x60.png",
     "128": "/images/favicons/firefox_app_128x128.png",
