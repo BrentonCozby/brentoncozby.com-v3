@@ -91,7 +91,7 @@ const creationsFeatured = [
         code: 'https://github.com/BrentonCozby/simon-game-fcc',
         date: 'January 2017'
     }
-];
+]
 
 const images = {
     'https://s3-us-west-1.amazonaws.com/brentoncozby.com/rainbow-hat.jpg': 'Brenton Cozby in a rainbow hat.',
@@ -113,7 +113,7 @@ const images = {
     'https://s3-us-west-1.amazonaws.com/brentoncozby.com/studying.jpg': 'Brenton Cozby candid shot whilst studying.',
     'https://s3-us-west-1.amazonaws.com/brentoncozby.com/superbowl.jpg': 'Brenton Cozby at superbowl XLVII.',
     'https://s3-us-west-1.amazonaws.com/brentoncozby.com/too-big-for-cart.jpg': 'Brenton Cozby too big for that cart. And too big to be pushed in one.'
-};
+}
 
 export {images}
 export {creationsFeatured}

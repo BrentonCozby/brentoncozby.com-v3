@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import './jqBootstrapValidation.js'
 
 $(function() {
@@ -64,25 +66,26 @@ $(function() {
         $(this).tab("show");
     });
 });
+/* eslint-enable */
 
 /*When clicking on Full hide fail/success boxes */
 $('#name, #email, #message, #phone').focus(function() {
-    $('#success').html('');
-});
+    $('#success').html('')
+})
 
 const $contact = $('#contact')
 const $overlay = $('#overlay')
 const $menuButton = $('#menu-button')
 const $menu = $('#menu')
 
-$('.contact-btn').click(e => {
+$('.contact-btn').click(function() {
     $contact.addClass('revealed')
     $overlay.addClass('revealed')
     $menuButton.removeClass('open')
     $menu.removeClass('revealed')
 })
 
-$('#close').click(e => {
+$('#close').click(function() {
     $contact.removeClass('revealed')
     $overlay.removeClass('revealed')
 })

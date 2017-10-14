@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /* jqBootstrapValidation
  * A plugin for automating validation on Twitter Bootstrap formatted forms.
  *
@@ -9,9 +11,9 @@
  */
 
 (function( $ ){
-    
+
         var createdElements = [];
-    
+
         var defaults = {
             options: {
                 prependExistingHelpBlock: false,
@@ -30,25 +32,25 @@
             },
         methods: {
           init : function( options ) {
-    
+
             var settings = $.extend(true, {}, defaults);
-    
+
             settings.options = $.extend(true, settings.options, options);
-    
+
             var $siblingElements = this;
-    
+
             var uniqueForms = $.unique(
               $siblingElements.map( function () {
                 return $(this).parents("form")[0];
               }).toArray()
             );
-    
+
             $(uniqueForms).bind("submit", function (e) {
               var $form = $(this);
               var warningsFound = 0;
               var $inputs = $form.find("input,textarea,select").not("[type=submit],[type=image]").filter(settings.options.filter);
               $inputs.trigger("submit.validation").trigger("validationLostFocus.validation");
-    
+
               $inputs.each(function (i, el) {
                 var $this = $(el),
                   $controlGroup = $this.parents(".form-group").first();
@@ -59,9 +61,9 @@
                   warningsFound++;
                 }
               });
-    
+
               $inputs.trigger("validationLostFocus.validation");
-    
+
               if (warningsFound) {
                 if (settings.options.preventSubmit) {
                   e.preventDefault();
@@ -77,29 +79,29 @@
                 }
               }
             });
-    
+
             return this.each(function(){
-    
+
               // Get references to everything we're interested in
               var $this = $(this),
                 $controlGroup = $this.parents(".form-group").first(),
                 $helpBlock = $controlGroup.find(".help-block").first(),
                 $form = $this.parents("form").first(),
                 validatorNames = [];
-    
+
               // create message container if not exists
               if (!$helpBlock.length && settings.options.autoAdd && settings.options.autoAdd.helpBlocks) {
                   $helpBlock = $('<div class="help-block" />');
                   $controlGroup.find('.controls').append($helpBlock);
                                 createdElements.push($helpBlock[0]);
               }
-    
+
               // =============================================================
               //                                     SNIFF HTML FOR VALIDATORS
               // =============================================================
-    
+
               // *snort sniff snuffle*
-    
+
               if (settings.options.sniffHtml) {
                 var message = "";
                 // ---------------------------------------------------------
@@ -214,16 +216,16 @@
                   $this.data("validationMaxcheckedMaxchecked", $this.attr("maxchecked"));
                 }
               }
-    
+
               // =============================================================
               //                                       COLLECT VALIDATOR NAMES
               // =============================================================
-    
+
               // Get named validators
               if ($this.data("validation") !== undefined) {
                 validatorNames = $this.data("validation").split(",");
               }
-    
+
               // Get extra ones defined on the element's data attributes
               $.each($this.data(), function (i, el) {
                 var parts = i.replace(/([A-Z])/g, ",$1").split(",");
@@ -231,24 +233,24 @@
                   validatorNames.push(parts[1]);
                 }
               });
-    
+
               // =============================================================
               //                                     NORMALISE VALIDATOR NAMES
               // =============================================================
-    
+
               var validatorNamesToInspect = validatorNames;
               var newValidatorNamesToInspect = [];
-    
+
               do // repeatedly expand 'shortcut' validators into their real validators
               {
                 // Uppercase only the first letter of each name
                 $.each(validatorNames, function (i, el) {
                   validatorNames[i] = formatValidatorName(el);
                 });
-    
+
                 // Remove duplicate validator names
                 validatorNames = $.unique(validatorNames);
-    
+
                 // Pull out the new validator names from each shortcut
                 newValidatorNamesToInspect = [];
                 $.each(validatorNamesToInspect, function(i, el) {
@@ -271,17 +273,17 @@
                     }
                   }
                 });
-    
+
                 validatorNamesToInspect = newValidatorNamesToInspect;
-    
+
               } while (validatorNamesToInspect.length > 0)
-    
+
               // =============================================================
               //                                       SET UP VALIDATOR ARRAYS
               // =============================================================
-    
+
               var validators = {};
-    
+
               $.each(validatorNames, function (i, el) {
                 // Set up the 'override' message
                 var message = $this.data("validation" + el + "Message");
@@ -294,7 +296,7 @@
                       : "'" + el + "' validation failed <!-- Add attribute 'data-validation-" + el.toLowerCase() + "-message' to input to change this message -->"
                   )
                 ;
-    
+
                 $.each(
                   settings.validatorTypes,
                   function (validatorType, validatorTemplate) {
@@ -316,15 +318,15 @@
                     }
                   }
                 );
-    
+
                 if (!foundValidator && settings.builtInValidators[el.toLowerCase()]) {
-    
+
                   var validator = $.extend(true, {}, settings.builtInValidators[el.toLowerCase()]);
                   if (hasOverrideMessage) {
                     validator.message = message;
                   }
                   var validatorType = validator.type.toLowerCase();
-    
+
                   if (validatorType === "shortcut") {
                     foundValidator = true;
                   } else {
@@ -348,16 +350,16 @@
                     );
                   }
                 }
-    
+
                 if (! foundValidator) {
                   $.error("Cannot find validation info for '" + el + "'");
                 }
               });
-    
+
               // =============================================================
               //                                         STORE FALLBACK VALUES
               // =============================================================
-    
+
               $helpBlock.data(
                 "original-contents",
                 (
@@ -366,7 +368,7 @@
                     : $helpBlock.html()
                 )
               );
-    
+
               $helpBlock.data(
                 "original-role",
                 (
@@ -375,7 +377,7 @@
                     : $helpBlock.attr("role")
                 )
               );
-    
+
               $controlGroup.data(
                 "original-classes",
                 (
@@ -384,7 +386,7 @@
                     : $controlGroup.attr("class")
                 )
               );
-    
+
               $this.data(
                 "original-aria-invalid",
                 (
@@ -393,20 +395,20 @@
                     : $this.attr("aria-invalid")
                 )
               );
-    
+
               // =============================================================
               //                                                    VALIDATION
               // =============================================================
-    
+
               $this.bind(
                 "validation.validation",
                 function (event, params) {
-    
+
                   var value = getValue($this);
-    
+
                   // Get a list of the errors to apply
                   var errorsFound = [];
-    
+
                   $.each(validators, function (validatorType, validatorTypeArray) {
                     if (value || value.length || (params && params.includeEmpty) || (!!settings.validatorTypes[validatorType].blockSubmit && params && !!params.submitting)) {
                       $.each(validatorTypeArray, function (i, validator) {
@@ -416,18 +418,18 @@
                       });
                     }
                   });
-    
+
                   return errorsFound;
                 }
               );
-    
+
               $this.bind(
                 "getValidators.validation",
                 function () {
                   return validators;
                 }
               );
-    
+
               // =============================================================
               //                                             WATCH FOR CHANGES
               // =============================================================
@@ -448,11 +450,11 @@
                   "change"
                 ].join(".validation ") + ".validation",
                 function (e, params) {
-    
+
                   var value = getValue($this);
-    
+
                   var errorsFound = [];
-    
+
                   $controlGroup.find("input,textarea,select").each(function (i, el) {
                     var oldCount = errorsFound.length;
                     $.each($(el).triggerHandler("validation.validation", params), function (j, message) {
@@ -465,16 +467,16 @@
                       $(el).attr("aria-invalid", (original !== undefined ? original : false));
                     }
                   });
-    
+
                   $form.find("input,select,textarea").not($this).not("[name=\"" + $this.attr("name") + "\"]").trigger("validationLostFocus.validation");
-    
+
                   errorsFound = $.unique(errorsFound.sort());
-    
+
                   // Were there any errors?
                   if (errorsFound.length) {
                     // Better flag it up as a warning.
                     $controlGroup.removeClass("success error").addClass("warning");
-    
+
                     // How many errors did we find?
                     if (settings.options.semanticallyStrict && errorsFound.length === 1) {
                       // Only one? Being strict? Just output it.
@@ -492,7 +494,7 @@
                     }
                     $helpBlock.html($helpBlock.data("original-contents"));
                   }
-    
+
                   if (e.type === "blur") {
                     $controlGroup.removeClass("success");
                   }
@@ -504,15 +506,15 @@
             });
           },
           destroy : function( ) {
-    
+
             return this.each(
               function() {
-    
+
                 var
                   $this = $(this),
                   $controlGroup = $this.parents(".form-group").first(),
                   $helpBlock = $controlGroup.find(".help-block").first();
-    
+
                 // remove our events
                 $this.unbind('.validation'); // events are namespaced.
                 // reset help text
@@ -527,13 +529,13 @@
                             if (createdElements.indexOf($helpBlock[0]) > -1) {
                                 $helpBlock.remove();
                             }
-    
+
               }
             );
-    
+
           },
           collectErrors : function(includeEmpty) {
-    
+
             var errorMessages = {};
             this.each(function (i, el) {
               var $el = $(el);
@@ -541,26 +543,26 @@
               var errors = $el.triggerHandler("validation.validation", {includeEmpty: true});
               errorMessages[name] = $.extend(true, errors, errorMessages[name]);
             });
-    
+
             $.each(errorMessages, function (i, el) {
               if (el.length === 0) {
                 delete errorMessages[i];
               }
             });
-    
+
             return errorMessages;
-    
+
           },
           hasErrors: function() {
-    
+
             var errorMessages = [];
-    
+
             this.each(function (i, el) {
               errorMessages = errorMessages.concat(
                 $(el).triggerHandler("getValidators.validation") ? $(el).triggerHandler("validation.validation", {submitting: true}) : []
               );
             });
-    
+
             return (errorMessages.length > 0);
           },
           override : function (newDefaults) {
@@ -583,13 +585,13 @@
               if (validator.lastValue === value && validator.lastFinished) {
                 return !validator.lastValid;
               }
-    
+
               if (validator.lastFinished === true)
               {
                 validator.lastValue = value;
                 validator.lastValid = true;
                 validator.lastFinished = false;
-    
+
                 var rrjqbvValidator = validator;
                 var rrjqbvThis = $this;
                 executeFunctionByName(
@@ -613,9 +615,9 @@
                   }
                 );
               }
-    
+
               return false;
-    
+
             }
           },
           ajax: {
@@ -633,7 +635,7 @@
               if (""+validator.lastValue === ""+value && validator.lastFinished === true) {
                 return validator.lastValid === false;
               }
-    
+
               if (validator.lastFinished === true)
               {
                 validator.lastValue = value;
@@ -669,9 +671,9 @@
                   }
                 });
               }
-    
+
               return false;
-    
+
             }
           },
                 regex: {
@@ -846,7 +848,7 @@
                 }
             }
         };
-    
+
         var formatValidatorName = function (name) {
             return name
                 .toLowerCase()
@@ -858,7 +860,7 @@
                 )
             ;
         };
-    
+
         var getValue = function ($this) {
             // Extract the value we're talking about
             var value = $this.val();
@@ -871,11 +873,11 @@
             }
             return value;
         };
-    
+
       function regexFromString(inputstring) {
             return new RegExp("^" + inputstring + "$");
         }
-    
+
       /**
        * Thanks to Jason Bunting via StackOverflow.com
        *
@@ -891,9 +893,9 @@
         }
         return context[func].apply(this, args);
       }
-    
+
         $.fn.jqBootstrapValidation = function( method ) {
-    
+
             if ( defaults.methods[method] ) {
                 return defaults.methods[method].apply( this, Array.prototype.slice.call( arguments, 1 ));
             } else if ( typeof method === 'object' || ! method ) {
@@ -902,12 +904,11 @@
             $.error( 'Method ' +  method + ' does not exist on jQuery.jqBootstrapValidation' );
                 return null;
             }
-    
+
         };
-    
+
       $.jqBootstrapValidation = function (options) {
         $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this,arguments);
       };
-    
+
     })( jQuery );
-    
