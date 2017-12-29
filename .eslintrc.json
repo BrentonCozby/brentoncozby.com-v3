@@ -30,7 +30,9 @@
             "error",
             "never"
         ],
-        "no-fallthrough": "off"
+        "no-fallthrough": "off",
+        "arrow-parens": "off",
+        "consistent-return": "off"
     },
     "globals": {
         "NODE_ENV": false,

@@ -21,7 +21,7 @@ const creationsFeatured = [
         description: 'A single-page blogging application with a UI like a magazine and a WYSIWYG editor. Full-stack CRUD app using REST APIs.',
         tools: ['React', 'Redux', 'Firebase', 'Froala-editor', 'Webpack', 'SASS'],
         jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/blog-react-redux.jpg',
-        demo: 'https://brentoncozby.com/blog-react-redux',
+        demo: 'https://d9yyyn6b48yl1.cloudfront.net/posts',
         code: 'https://github.com/BrentonCozby/blog-react-redux',
         date: 'April 2017'
     }, {
@@ -64,14 +64,14 @@ const creationsFeatured = [
         jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/youtube-react.jpg',
         demo: 'https://brentoncozby.github.io/youtube-react',
         code: 'https://github.com/BrentonCozby/youtube-react',
-        date: ''
+        date: 'December 2016'
     }, {
         title: 'Quote Collage',
         description: 'Organize your favorite quotes in a beautiful Pinterest-style layout.',
         tools: ['React', 'create-react-app', 'Firebase', 'Express'],
         jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/quote-collage.jpg',
         gif: 'https://i.imgur.com/FM2GSEV.gif',
-        'demo': 'https://brentoncozby.com/quote-collage/',
+        demo: 'https://d3jcu1mtlvo8ex.cloudfront.net/',
         code: 'https://github.com/BrentonCozby/quote-collage',
         date: 'November 2016'
     }, {
@@ -85,11 +85,27 @@ const creationsFeatured = [
     }, {
         title: 'Simon Game from the 80s',
         description: 'It really is that simon game from the 80s.',
-        tools: ['Browersify', 'SASS', 'Express'],
+        tools: ['Webpack', 'SASS', 'Latest JavaScript', 'EJS', 'NodeJS'],
         jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/simon-game.png',
-        demo: 'https://brentoncozby.com/free-code-camp/simon-game-fcc/',
+        demo: 'https://d35zt8tt8drw4a.cloudfront.net/',
         code: 'https://github.com/BrentonCozby/simon-game-fcc',
         date: 'January 2017'
+    }, {
+        title: 'Calculator',
+        description: 'Like the ones I used in elementary school to cheat on math homework',
+        tools: ['Webpack', 'SASS', 'Latest JavaScript', 'EJS', 'NodeJS'],
+        jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/calculator.jpg',
+        demo: 'https://d30l212gx59yk4.cloudfront.net/',
+        code: 'https://github.com/BrentonCozby/calculator-fcc',
+        date: 'June 2016'
+    }, {
+        title: 'Tic Tac Toe',
+        description: 'Written in vanilla JavaScript',
+        tools: ['Webpack', 'SASS', 'Latest JavaScript', 'EJS', 'NodeJS'],
+        jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/tic-tac-toe-fcc.jpg',
+        demo: 'https://d1w0yr82gppuev.cloudfront.net/',
+        code: 'https://github.com/BrentonCozby/tic-tac-toe-fcc',
+        date: 'June 2016'
     }
 ]
 
