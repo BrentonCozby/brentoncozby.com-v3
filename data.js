@@ -25,14 +25,6 @@ const creationsFeatured = [
         code: 'https://github.com/BrentonCozby/blog-react-redux',
         date: 'April 2017'
     }, {
-        title: 'Rally Point Webinars',
-        description: 'Website for Rally Point Webinars. Build tools created and customized with NodeJS, including EJS compilation, CSS/HTML/JS minification, filename hashing for cache-busting, service worker integration, and responsive polyfills from polyfill.io.',
-        tools: ['EJS', 'SASS', 'jQuery', 'Webpack', 'NodeJS'],
-        jpg: 'https://s3-us-west-1.amazonaws.com/brentoncozby.com/rally-point-webinars.jpg',
-        demo: 'http://rallypointwebinars.com',
-        code: 'https://github.com/BrentonCozby/rally-point-webinars',
-        date: 'April 2017'
-    }, {
         title: 'FVI Continuing Eduation',
         description: 'Website for Continuing Eduation department at the Florida Vocational Institute.',
         tools: ['Webpack', 'Pug', 'SASS', 'jQuery'],
