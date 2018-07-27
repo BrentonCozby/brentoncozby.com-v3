@@ -5,11 +5,7 @@ Boilerplate for a Static website using EJS and SASS.
 Set site information in the config.js file. These variables are used throughout the site.
 
 ## DEVELOPMENT
-**Usage:** Run the following scripts in 4 different terminal tabs:
-1. ```npm run setup-for-dev``` and then ```npm start```
-2. ```npm run watch:html```
-3. ```npm run watch:css```
-4. ```npm run watch:js```
+```yarn setup-for-dev``` and then ```yarn dev```
 
 **Features:**
 - Watch css, js, and html files and recompile on change
@@ -17,7 +13,7 @@ Set site information in the config.js file. These variables are used throughout 
 
 ## PRODUCTION
 
-**Usage:** ```npm run prod```
+**Usage:** ```yarn prod```
 
 **Features:**
 - Hashes css and js filenames in production for cache busting
