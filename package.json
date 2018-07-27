@@ -1,7 +1,7 @@
 {
-    "name": "ejs-sass-static-boilerplate",
+    "name": "brenton-cozby.com",
     "version": "1.0.0",
-    "description": "Boilerplate for a Static website using EJS and SASS",
+    "description": "Website for Brenton Cozby",
     "main": "index.js",
     "scripts": {
         "start": "browser-sync start -s 'dist' -f 'dist' --no-open --no-notify --reload-debounce 50",
@@ -56,7 +56,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/BrentonCozby/ejs-sass-static-boilerplate.git"
+        "url": "git+https://github.com/BrentonCozby/brentoncozby.com.git"
     },
     "keywords": [
         "EJS",
@@ -67,7 +67,7 @@
         "NodeJS"
     ],
     "bugs": {
-        "url": "https://github.com/BrentonCozby/ejs-sass-static-boilerplate/issues"
+        "url": "https://github.com/BrentonCozby/brentoncozby.com/issues"
     },
-    "homepage": "https://github.com/BrentonCozby/ejs-sass-static-boilerplate#readme"
+    "homepage": "https://github.com/BrentonCozby/brentoncozby.com#readme"
 }
