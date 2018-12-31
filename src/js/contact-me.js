@@ -38,10 +38,10 @@ function submitContactForm() {
 }
 
 window.ready(function() {
-    $('#contact-form').on('submit', e => {
-        e.preventDefault()
-        submitContactForm(e)
-    })
+    // $('#contact-form').on('submit', e => {
+    //     e.preventDefault()
+    //     submitContactForm(e)
+    // })
 
     /*When clicking on Full hide fail/success boxes */
     // $('#name').focus(function() {
@@ -63,16 +63,24 @@ window.ready(function() {
     const $menu = $('#menu')
 
     $('.contact-btn').on('click', function() {
-        $contact.classList.add('revealed')
-        $overlay.classList.add('revealed')
-        $menuButton.classList.remove('open')
-        $menu.classList.remove('revealed')
+        var mailLink = document.createElement('a')
+        mailLink.setAttribute('href', 'mailto:brentoncozby@gmail.com')
+        mailLink.setAttribute('target', '_blank')
+        mailLink.setAttribute('rel', 'noopener')
+        mailLink.click()
     })
 
-    $('#close').on('click', function() {
-        $contact.classList.remove('revealed')
-        $overlay.classList.remove('revealed')
-    })
+    // $('.contact-btn').on('click', function() {
+    //     $contact.classList.add('revealed')
+    //     $overlay.classList.add('revealed')
+    //     $menuButton.classList.remove('open')
+    //     $menu.classList.remove('revealed')
+    // })
+
+    // $('#close').on('click', function() {
+    //     $contact.classList.remove('revealed')
+    //     $overlay.classList.remove('revealed')
+    // })
 
     // $("a[data-toggle=\"tab\"]").click(function(e) {
     //     e.preventDefault()
