@@ -1,39 +1,44 @@
 import sanitizeHTML from 'sanitize-html'
 
 function submitContactForm() {
-    var name = sanitizeHTML($("input#name").value)
-    var email = sanitizeHTML($("input#email").value)
-    var phone = sanitizeHTML($("input#phone").value)
-    var message = sanitizeHTML($("textarea#message").value)
+    var name = sanitizeHTML($('input#name').value)
+    var email = sanitizeHTML($('input#email').value)
+    var phone = sanitizeHTML($('input#phone').value)
+    var message = sanitizeHTML($('textarea#message').value)
 
     fetch('/contact_me.php', {
         method: 'POST',
         headers: {
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({ name, email, phone, message }),
     })
-    .then(data => data.json())
-    .then(response => {
-        $('#success').innerHTML = "<div class='alert alert-success'>"
-        $('#success > .alert-success').innerHTML = "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>"
-        $('#success > .alert-success').innerHTML += "<strong style='color:green'>Your message has been sent. </strong>"
-        $('#success > .alert-success').innerHTML += "</div>"
-        $('#contact-form').reset()
-    })
-    .catch(error => {
-        $('#success').innerHTML = "<div class='alert alert-danger'>"
-        $('#success > .alert-danger').innerHTML = "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>"
-        $('#success > .alert-danger').innerHTML += "<strong style='color:red'>Sorry " + name + ", it seems that my mail server is not responding. Please try again later!"
-        $('#success > .alert-danger').innerHTML += '</div>'
-        $('#contact-form').reset()
-    })
+        .then(data => data.json())
+        .then(response => {
+            $('#success').innerHTML = "<div class='alert alert-success'>"
+            $('#success > .alert-success').innerHTML =
+                "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>"
+            $('#success > .alert-success').innerHTML +=
+                "<strong style='color:green'>Your message has been sent. </strong>"
+            $('#success > .alert-success').innerHTML += '</div>'
+            $('#contact-form').reset()
+        })
+        .catch(error => {
+            $('#success').innerHTML = "<div class='alert alert-danger'>"
+            $('#success > .alert-danger').innerHTML =
+                "<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>"
+            $('#success > .alert-danger').innerHTML +=
+                "<strong style='color:red'>Sorry " +
+                name +
+                ', it seems that my mail server is not responding. Please try again later!'
+            $('#success > .alert-danger').innerHTML += '</div>'
+            $('#contact-form').reset()
+        })
 }
 
 window.ready(function() {
-
-    $("#contact-form").on('submit', e => {
+    $('#contact-form').on('submit', e => {
         e.preventDefault()
         submitContactForm(e)
     })

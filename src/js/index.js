@@ -26,7 +26,9 @@ $('.teaser').on('click', e => {
 })
 
 $('.creation-modal-close, .close-btn').on('click', e => {
-    $(e.currentTarget).querySelector('.open').removeClass('open')
+    $(e.currentTarget)
+        .querySelector('.open')
+        .removeClass('open')
 })
 
 const $overlay = $('#overlay')

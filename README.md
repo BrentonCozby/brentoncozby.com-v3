@@ -26,16 +26,14 @@ Use EJS, SASS, and the latest JavaScript syntax to build fully-static production
 
 ## DEVELOPMENT
 
-1. ```npm run setup-for-dev```
-2. ```npm run dev``` (to start server and watch files)
+```yarn dev``` (to start server and watch files)
 
 **Development Features:**
 * CSS updates without browser reload; browser auto-reloads upon JS and HTML updates
 * Source maps for SASS and JS files for easier debugging
 
 ## PRODUCTION
-
-```npm run prod```
+```yarn build```
 
 **Production Features:**
 * Minification for CSS (with Autoprefixer), JS (with Babel), and HTML files
