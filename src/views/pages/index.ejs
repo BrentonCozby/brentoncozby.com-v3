@@ -1,7 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <%- include(`${partials}/head`, {pageTitle: 'Portfolio'}); -%>
 <body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <h3>Please enable JavaScript in order to view this site properly.</h3>
+    </noscript>
 
     <%- include(`${partials}/contact`); -%>
     <%- include(`${partials}/nav`); -%>
@@ -14,7 +21,7 @@
         <h2 class="portfolio-title">Featured Creations</h2>
 
         <div id="creation-teasers" class="creation-teasers">
-            <% creationsFeatured.forEach((creation, index) => { %>
+            <% softwarePortolfio.forEach((creation, index) => { %>
             <div class="teaser" data-modal="creation-modal-<%= index %>">
                 <div class="teaser-image" style="background-image: url(<%= creation.jpg %>)" title="Brenton Cozby's <%= creation.title %>" alt="Brenton Cozby's <%= creation.title %>">
                     <div class="teaser-overlay">
@@ -26,7 +33,7 @@
             <% }) %>
         </div>
 
-        <% creationsFeatured.forEach((creation, index) => { %>
+        <% softwarePortolfio.forEach((creation, index) => { %>
         <div class="creation-modal" id="creation-modal-<%= index %>">
             <div class="creation-modal-close">
                 <span class="line1"></span>
@@ -131,15 +138,15 @@
                 <div class="spacer"></div>
                 <ul class="things-i-make appear fa-ul">
                     <li>
-                        <i class="fa-li fa fa-check-square-o"></i>
+                        <i class="fa-li fas fa-check-circle"></i>
                         Websites, such as this very one. <a href="https://github.com/BrentonCozby/brentoncozby.com" target="_blank" rel="noopener" title="GitHub repo for brentoncozby.com">View the Code</a>
                     </li>
                     <li>
-                        <i class="fa-li fa fa-check-square-o"></i>
+                        <i class="fa-li fas fa-check-circle"></i>
                         Web Applications, like this <a rel="noopener" target="_blank" title="Lumber Calculator" href="https://brentoncozby.com/CareForce-Lumber-Calculator/">Lumber Calculator</a>
                     </li>
                     <li>
-                        <i class="fa-li fa fa-check-square-o"></i>
+                        <i class="fa-li fas fa-check-circle"></i>
                         APIs, like this <a target="_blank" rel="noopener" title="Image Search API"href="http://image-search-fcc-cozby.herokuapp.com/">Image Search API</a>
                     </li>
                 </ul>
@@ -152,12 +159,12 @@
     </div>
 
     <div class="images-container">
-        <% const imageUrls = Object.keys(images) %>
+        <% const imageUrls = Object.keys(imagesOfMe) %>
         <% imageUrls.forEach(url => { %>
         <figure>
-            <div class="image" style="background-image: url(<%= url %>)" title="<%= images[url] %>"></div>
+            <div class="image" style="background-image: url(<%= url %>)" title="<%= imagesOfMe[url] %>"></div>
             <div class="image-overlay"></div>
-            <figcaption><%= images[url].split('Brenton Cozby ')[1] %></figcaption>
+            <figcaption><%= imagesOfMe[url].split('Brenton Cozby ')[1] %></figcaption>
         </figure>
         <% }) %>
     </div>

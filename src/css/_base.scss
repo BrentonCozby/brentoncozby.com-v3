@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700');
+$main-font: 'Ubuntu', sans-serif;
+
+// $main-font: 'Helvetica Neue', 'Calibri Light', 'Roboto', sans-serif;
+$appear-transition-opacity: 300ms;
+$appear-transition-transform: 10000ms;
+
+* {
+    box-sizing: border-box;
+    position: relative;
+    transition: all 200ms;
+}
+
+html,
+p,
+a,
+li,
+span,
+button,
+input,
+textarea {
+    font-family: $main-font;
+    color: #666;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+    font-family: $main-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #444;
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity $appear-transition-opacity, transform $appear-transition-transform;
+}

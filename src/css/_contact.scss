@@ -22,6 +22,11 @@
 }
 
 .contact-form input,
+.contact-form textarea {
+    background-color: #fff;
+}
+
+.contact-form input,
 .contact-form textarea,
 .contact-form .send {
     display: block;
@@ -62,6 +67,7 @@
     top: 3px;
     font-size: 1.1rem;
     cursor: pointer;
+    z-index: 1;
 }
 
 #success {
