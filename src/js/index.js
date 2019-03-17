@@ -21,14 +21,13 @@ const $portfolio = $('#portfolio')
 
 $('.teaser').on('click', e => {
     const modalId = e.currentTarget.dataset.modal
-    $(`#${modalId}`).addClass('open')
-    $(window).scrollTop($portfolio.offset().top)
+    $(`#${modalId}`).classList.add('open')
+    $portfolio.scrollIntoView(true);
 })
 
 $('.creation-modal-close, .close-btn').on('click', e => {
-    $(e.currentTarget)
-        .querySelector('.open')
-        .removeClass('open')
+    const modalId = e.currentTarget.dataset.modal
+    $(`#${modalId}`).classList.remove('open')
 })
 
 const $overlay = $('#overlay')

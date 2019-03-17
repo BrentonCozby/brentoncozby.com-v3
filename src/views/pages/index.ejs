@@ -18,7 +18,7 @@
     </div>
 
     <div id="portfolio" class="portfolio">
-        <h2 class="portfolio-title">Featured Creations</h2>
+        <h2 class="portfolio-title">Portfolio</h2>
 
         <div id="creation-teasers" class="creation-teasers">
             <% softwarePortolfio.forEach((creation, index) => { %>
@@ -35,7 +35,7 @@
 
         <% softwarePortolfio.forEach((creation, index) => { %>
         <div class="creation-modal" id="creation-modal-<%= index %>">
-            <div class="creation-modal-close">
+            <div class="creation-modal-close" data-modal="creation-modal-<%= index %>">
                 <span class="line1"></span>
                 <span class="line2"></span>
             </div>
@@ -57,7 +57,7 @@
                         <div class="creation-code">View Code</div>
                     </a>
                 </div>
-                <button class="close-btn">x&nbsp;&nbsp;close project</button>
+                <button class="close-btn" data-modal="creation-modal-<%= index %>">x&nbsp;&nbsp;close project</button>
             </div>
         </div>
         <% }) %>
@@ -117,43 +117,6 @@
             <div class="item">
                 <div class="date">2017</div>
                 <div class="caption">Got my first client as a Web Developer</div>
-            </div>
-        </div>
-    </div>
-
-    <div id="story" class="story">
-        <div class="text-container">
-            <div class="content container">
-                <h3 class="appear">I like making things.</h3>
-                <div class="spacer"></div>
-                <p class="appear">You could ask me to make you a cake and I'd make you my best cake.</p>
-                <div class="spacer"></div>
-                <figure class="cake-figure appear"><img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/making-cake.jpg" title="Brenton Cozby making a cake" alt="Brenton Cozby making a cake" class="my-best-cakesrc" />
-                    <figcaption>It's been a while since I made a cake.</figcaption>
-                </figure>
-                <div class="spacer"></div>
-                <p class="appear">I'm not that good at making cakes, but...</p>
-                <div class="spacer"></div>
-                <h3 class="appear">I enjoy making these:</h3>
-                <div class="spacer"></div>
-                <ul class="things-i-make appear fa-ul">
-                    <li>
-                        <i class="fa-li fas fa-check-circle"></i>
-                        Websites, such as this very one. <a href="https://github.com/BrentonCozby/brentoncozby.com" target="_blank" rel="noopener" title="GitHub repo for brentoncozby.com">View the Code</a>
-                    </li>
-                    <li>
-                        <i class="fa-li fas fa-check-circle"></i>
-                        Web Applications, like this <a rel="noopener" target="_blank" title="Lumber Calculator" href="https://brentoncozby.com/CareForce-Lumber-Calculator/">Lumber Calculator</a>
-                    </li>
-                    <li>
-                        <i class="fa-li fas fa-check-circle"></i>
-                        APIs, like this <a target="_blank" rel="noopener" title="Image Search API"href="http://image-search-fcc-cozby.herokuapp.com/">Image Search API</a>
-                    </li>
-                </ul>
-                <div class="spacer"></div>
-                <p class="appear"><strong>I also enjoy some CSS.</strong></p>
-                <p class="appear"><strong>Check out the responsive image grid below...</strong></p>
-                <div class="spacer"></div>
             </div>
         </div>
     </div>
