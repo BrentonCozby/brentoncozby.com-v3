@@ -1,0 +1,26 @@
+[{
+    "title": "Techlaunch.io",
+    "description": "Website for the Techlaunch Coding and IT School in Miami, FL.",
+    "tools": ["PHP", "SASS", "Webpack", "NodeJS", "jQuery"],
+    "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/techlaunch.jpg",
+    "demo": "https://techlaunch.io",
+    "code": "https://github.com/FVItech/Techlaunch.io",
+    "date": "June 2017"
+}, {
+    "title": "Myocortex",
+    "description": "Website for Myocortex Human Performance Systems in Miami, FL. I created the Webpack 2 configurations from scratch. Webpack is controlling the entire build process, from development to production. The animations are built from scratch without any libraries.",
+    "tools": ["Pug", "SASS", "Webpack", "jQuery"],
+    "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex.jpg",
+    "demo": "http://www.myocortex.com",
+    "code": "https://github.com/BrentonCozby/myocortex-website",
+    "date": "June 2017"
+}, {
+    "title": "Lumber Calculator",
+    "description": "Optimizes lumber orders and generates cut lists for various City Year Care Force schematics.",
+    "tools": ["Browserify", "Pug", "SASS", "jQuery"],
+    "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/lumber-calculator.jpg",
+    "gif": "https://i.imgur.com/e52JDDd.gif",
+    "demo": "https://brentoncozby.com/CareForce-Lumber-Calculator/",
+    "code": "https://github.com/BrentonCozby/CareForce-Lumber-Calculator",
+    "date": "June 2016"
+}]

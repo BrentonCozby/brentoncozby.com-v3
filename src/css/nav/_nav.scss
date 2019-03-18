@@ -17,6 +17,7 @@ nav {
     font-weight: 300;
     letter-spacing: 2px;
     line-height: 1.5rem;
+    color: #bbb;
 
     @media all and (min-width: 768px) {
         padding: 15px 0 0 15px;
@@ -32,7 +33,7 @@ nav {
 
     .subtitle {
         display: block;
-        font-size: .7rem;
+        font-size: 0.7rem;
         margin-top: 10px;
         margin-left: 3px;
         text-transform: uppercase;
@@ -46,7 +47,7 @@ nav {
 
         @media all and (min-width: 992px) {
             margin-top: 20px;
-            font-size: .9rem;
+            font-size: 0.9rem;
         }
     }
 }
@@ -54,7 +55,7 @@ nav {
 @keyframes zoomInFromRight {
     from {
         opacity: 0;
-        transform: translate(50px, 20px) scale(.8);
+        transform: translate(50px, 20px) scale(0.8);
     }
     to {
         opacity: 1;
@@ -65,7 +66,7 @@ nav {
 @keyframes zoomInFromLeft {
     from {
         opacity: 0;
-        transform: translate(-50px, 20px) scale(.8);
+        transform: translate(-50px, 20px) scale(0.8);
     }
     to {
         opacity: 1;
@@ -88,5 +89,5 @@ nav {
     }
 }
 
-@import "_menu-button";
-@import "_menu";
+@import '_menu-button';
+@import '_menu';
