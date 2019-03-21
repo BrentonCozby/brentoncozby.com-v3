@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Accounting App'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <h3>Please enable JavaScript in order to view this site properly.</h3>
+    </noscript>
+
+    <%- include(`${partials}/contact`); -%>
+    <%- include(`${partials}/nav`); -%>
+
+    <main class="project">
+        <div>
+            <a class="view-other-projects" href="/">View Other Projects →</a>
+        </div>
+        <h1 class="project-title">Accounting App</h1>
+        <div class="split-2">
+            <div class="split-box">
+                <p class="project-description">A single-page application for tracking a company's expenditures. Includes roles, permissions, authentication, an API, a React frontend, and admininstrative screens and capabilities.</p>
+                <h3>Technology Used:</h3>
+                <ul class="project-tools">
+                    <li>React</li>
+                    <li>Postgres</li>
+                    <li>NodeJS with Express</li>
+                </ul>
+            </div>
+            <div class="split-box">
+                <h3>Features:</h3>
+                <ul>
+                    <li>3 different user roles (admin, manager, user), each with different permissions levels</li>
+                    <li>Can view all expenditures or expenditures for a certain user</li>
+                    <li>Summary reports available with expenditures per week, including total spending per week and avergage daily spending</li>
+                    <li>Expenditure tables allows filtering and sorting per column</li>
+                    <li>Independent REST API can be used by any app, such as Postman</li>
+                    <li>Unit tests for the UI services</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-buttons">
+            <div>
+                <a class="button view-code" href="https://github.com/BrentonCozby/accounting-app" title="Brenton Cozby's Accounting App" target="_blank" rel="noopener"><i class="fab fa-github"></i> View Code</a>
+            </div>
+        </div>
+        <div class="project-featured-images">
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/login.png" alt="Login">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditures.png" alt="Expenditures">
+                </div>
+            </div>
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditure-report.png" alt="Expenditure Report">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditure-modal.png" alt="Expenditure Modal">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>

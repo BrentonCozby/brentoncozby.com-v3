@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Accounting App'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <h3>Please enable JavaScript in order to view this site properly.</h3>
+    </noscript>
+
+    <%- include(`${partials}/contact`); -%>
+    <%- include(`${partials}/nav`); -%>
+
+    <main class="project">
+        <div>
+            <a class="view-other-projects" href="/">View Other Projects →</a>
+        </div>
+        <h1 class="project-title">Myocortex</h1>
+        <div class="split-2">
+            <div class="split-box">
+                <p class="project-description">Website for Myocortex Human Performance Systems in Miami, FL. Includes custom Webpack configurations, custom build tools using NodeJS, and custom animations.</p>
+                <h3>Technology Used:</h3>
+                <ul class="project-tools">
+                    <li>Pug</li>
+                    <li>SASS</li>
+                    <li>Webpack</li>
+                    <li>NodeJS</li>
+                    <li>jQuery</li>
+                </ul>
+            </div>
+            <div class="split-box">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Custom, lightweight, flexible build tools using NodeJS and Npm scripts</li>
+                    <li>Fully-integreated webpack configurations for Dev and Prod environments</li>
+                    <li>Animations built from scratch, using SASS</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-buttons">
+            <div>
+                <a class="button view-code" href="https://github.com/BrentonCozby/myocortex" title="Brenton Cozby's code repository for Myocortex.com" target="_blank" rel="noopener"><i class="fab fa-github"></i> View Code</a>
+                <a class="button view-live" href="https://myocortex.com" title="View Myocortex.com" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Website</a>
+            </div>
+        </div>
+        <div class="project-featured-images">
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex/contact.jpg" alt="Myocortex Sign Up">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex/respect.jpg" alt="Myocortex Respect The Process">
+                </div>
+            </div>
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex/golf.jpg" alt="Myocortex Systems">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex/man.jpg" alt="Myocortex Private Training">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>

@@ -10,6 +10,7 @@
     width: 100%;
     height: 100vw;
     margin: 0;
+    overflow: hidden;
 
     @media all and (min-width: 480px) {
         width: 50%;
@@ -34,16 +35,6 @@
 
 .images-container figure .image {
     width: 100%;
-    height: 100%;
-    background-size: 100% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition-timing-function: ease-out;
-    transition: filter 300ms, background-size 600ms;
-
-    @media all and (min-width: 1024px) {
-        filter: grayscale(100%) brightness(40%) blur(5px);
-    }
 }
 
 .images-container figure .image-overlay {
@@ -52,40 +43,18 @@
     top: 0;
     width: 100%;
     height: 100%;
-
-    @media all and (min-width: 1024px) {
-        display: none;
-    }
 }
 
 .images-container figure figcaption {
     position: absolute;
-    bottom: 8px;
-    left: 8px;
-    font-size: 20px;
+    bottom: 6px;
+    padding-left: 8px;
+    padding-right: 5px;
+    font-size: 14px;
     text-shadow: 0 2px 4px #000;
     color: #fff;
 
-    @media all and (min-width: 1024px) {
-        text-align: center;
-        width: 100%;
-        top: calc(50% - 30px);
-        padding: 15px;
-        line-height: 1.4;
-    }
-}
-
-.images-container figure {
-    @media all and (min-width: 1024px) {
-        &:hover .image,
-        &:focus .image {
-            filter: none;
-            background-size: 105% auto;
-        }
-
-        &:hover figcaption,
-        &:focus figcaption {
-            opacity: 0;
-        }
+    &::first-letter {
+        text-transform: uppercase;
     }
 }

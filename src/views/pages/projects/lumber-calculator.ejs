@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Lumber Calculator'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <h3>Please enable JavaScript in order to view this site properly.</h3>
+    </noscript>
+
+    <%- include(`${partials}/contact`); -%>
+    <%- include(`${partials}/nav`); -%>
+
+    <main class="project">
+        <div>
+            <a class="view-other-projects" href="/">View Other Projects →</a>
+        </div>
+        <h1 class="project-title">Lumber Calculator</h1>
+        <div class="split-2">
+            <div class="split-box">
+                <p class="project-description">A web app for optimizing lumber orders (from Home Depot). The user chooses a schematic from a pre-filled list, then chooses the quantity, and the app will generate a list of lumber to order, including how to cut each piece of lumber. My former team and I used this application to minimize our lumber costs at the City Year non-profit in Miami.</p>
+                <h3>Technology Used:</h3>
+                <ul class="project-tools">
+                    <li>Pug</li>
+                    <li>Sass</li>
+                    <li>Browserify</li>
+                    <li>NodeJS</li>
+                    <li>jQuery</li>
+                </ul>
+            </div>
+            <div class="split-box">
+                <h3>Features:</h3>
+                <ul>
+                    <li>Simple user experience: 1) choose a schematic 2) choose the quanity</li>
+                    <li>Responsive design optimized for usage on desktop and phone, since we often used the App in the store on our phones</li>
+                    <li>Improves upon a complicated Excel spreadsheet I had previously used to optimize our lumber orders</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-buttons">
+            <div>
+                <a class="button view-code" href="https://github.com/BrentonCozby/CareForce-Lumber-Calculator" title="Brenton Cozby's CareForce-Lumber-Calculator" target="_blank" rel="noopener"><i class="fab fa-github"></i> View Code</a>
+                <a class="button view-live" href="https://brentoncozby.com/CareForce-Lumber-Calculator/" title="View Lumber Calculator Live" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Web App</a>
+            </div>
+        </div>
+        <div class="project-featured-images">
+            <img src="https://i.imgur.com/e52JDDd.gif" alt="Lumber Calculator gif">
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>

@@ -17,19 +17,6 @@ import './contact-me'
 // eslint-disable-next-line no-console
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 
-const $portfolio = $('#portfolio')
-
-$('.teaser').on('click', e => {
-    const modalId = e.currentTarget.dataset.modal
-    $(`#${modalId}`).classList.add('open')
-    $portfolio.scrollIntoView(true);
-})
-
-$('.creation-modal-close, .close-btn').on('click', e => {
-    const modalId = e.currentTarget.dataset.modal
-    $(`#${modalId}`).classList.remove('open')
-})
-
 const $overlay = $('#overlay')
 const $menuButton = $('#menu-button')
 const $menu = $('#menu')

@@ -3,10 +3,14 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
     color: #eee;
     text-shadow: 1px 1px 1px #000;
     z-index: 101;
+
+    @media all and (min-width: 992px) {
+        padding: 20px 20px 10px 20px;
+    }
 }
 
 .title {
@@ -19,16 +23,8 @@ nav {
     line-height: 1.5rem;
     color: #bbb;
 
-    @media all and (min-width: 768px) {
-        padding: 15px 0 0 15px;
-        animation-name: zoomInFromRight;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-delay: 100ms;
-    }
-
     @media all and (min-width: 992px) {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .subtitle {
@@ -41,36 +37,10 @@ nav {
         letter-spacing: 7px;
         color: orange;
 
-        @media all and (min-width: 786px) {
-            margin-top: 15px;
-        }
-
         @media all and (min-width: 992px) {
-            margin-top: 20px;
-            font-size: 0.9rem;
+            margin-top: 10px;
+            font-size: 0.7rem;
         }
-    }
-}
-
-@keyframes zoomInFromRight {
-    from {
-        opacity: 0;
-        transform: translate(50px, 20px) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
-    }
-}
-
-@keyframes zoomInFromLeft {
-    from {
-        opacity: 0;
-        transform: translate(-50px, 20px) scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0, 0) scale(1);
     }
 }
 

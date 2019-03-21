@@ -13,54 +13,28 @@
     <%- include(`${partials}/contact`); -%>
     <%- include(`${partials}/nav`); -%>
 
-    <div class="landing-container">
-        <div class="banner-image"></div>
-    </div>
-
     <div id="portfolio" class="portfolio">
         <h2 class="portfolio-title">Portfolio</h2>
 
-        <div id="creation-teasers" class="creation-teasers">
-            <% softwarePortolfio.forEach((creation, index) => { %>
-            <div class="teaser" data-modal="creation-modal-<%= index %>">
-                <div class="teaser-image" style="background-image: url(<%= creation.jpg %>)" title="Brenton Cozby's <%= creation.title %>" alt="Brenton Cozby's <%= creation.title %>">
-                    <div class="teaser-overlay">
-                        <div class="plus">+</div>
-                    </div>
+        <div id="project-teasers" class="project-teasers">
+            <% softwarePortolfio.forEach((project, index) => { %>
+            <div class="teaser split-2">
+                <div class="split-box">
+                    <img class="teaser-image" src="<%= project.jpg || project.png %>" title="Brenton Cozby's <%= project.title %>" alt="Brenton Cozby's <%= project.title %>">
                 </div>
-                <h3 class="teaser-title"><%= creation.title %></h3>
+                <div class="split-box">
+                    <h3 class="teaser-title"><%= project.title %></h3>
+                    <ul class="tools">
+                        <% project.tools.forEach((tool) => { %>
+                        <li><%= tool %></li>
+                        <% }) %>
+                    </ul>
+                    <p class="description"><%= project.description -%></p>
+                    <a href="projects/<%= project.slug %>.html" class="learn-more-button">Learn More</a>
+                </div>
             </div>
             <% }) %>
         </div>
-
-        <% softwarePortolfio.forEach((creation, index) => { %>
-        <div class="creation-modal" id="creation-modal-<%= index %>">
-            <div class="creation-modal-close" data-modal="creation-modal-<%= index %>">
-                <span class="line1"></span>
-                <span class="line2"></span>
-            </div>
-            <h3 class="creation-modal-title"><%= creation.title %></h3>
-            <div class="creation-modal-details">
-                <div class="creation-modal-image" style="background-image: url(<%= creation.gif || creation.jpg %>);" title="Brenton Cozby's <%= creation.title %>" alt="Brenton Cozby's <%= creation.title %>"></div>
-                <p class="creation-description"><%= creation.description %></p>
-                <h3 class="tools-title">Tools</h3>
-                <ul class="tools">
-                    <% creation.tools.forEach(tool => { %>
-                    <li><%= tool %></li>
-                    <% }) %>
-                </ul>
-                <div class="creation-modal-buttons">
-                    <a href="<%= creation.demo %>" title="Brenton Cozby's <%= creation.title %>" target="_blank" rel="noopener">
-                        <div class="creation-demo">View Live</div>
-                    </a>
-                    <a href="<%= creation.code %>" title="Brenton Cozby's <%= creation.title %>" target="_blank" rel="noopener">
-                        <div class="creation-code">View Code</div>
-                    </a>
-                </div>
-                <button class="close-btn" data-modal="creation-modal-<%= index %>">x&nbsp;&nbsp;close project</button>
-            </div>
-        </div>
-        <% }) %>
     </div>
 
     <div id="timeline" class="timeline">
@@ -80,7 +54,7 @@
             </div>
             <div class="item">
                 <div class="date">2000</div>
-                <div class="caption">Joined traveling baseball and soccer teams</div>
+                <div class="caption">Joined baseball and soccer teams</div>
             </div>
             <div class="item">
                 <div class="date">2001</div>
@@ -108,15 +82,19 @@
             </div>
             <div class="item">
                 <div class="date">2014</div>
-                <div class="caption">Began City Year in Miami, an AmeriCorps program</div>
+                <div class="caption">Began City Year (an AmeriCorps volunteer program) in Miami</div>
             </div>
             <div class="item">
                 <div class="date">2016</div>
-                <div class="caption">Began learning how to code</div>
+                <div class="caption">Began learning how to code with free/cheap online courses</div>
             </div>
             <div class="item">
                 <div class="date">2017</div>
-                <div class="caption">Got my first client as a Web Developer</div>
+                <div class="caption">Got my first client as a Web Developer (Myocortex.com)</div>
+            </div>
+            <div class="item">
+                <div class="date">2018</div>
+                <div class="caption">Got my first full-time job as a Software Developer (First Data)</div>
             </div>
         </div>
     </div>
@@ -125,7 +103,7 @@
         <% const imageUrls = Object.keys(imagesOfMe) %>
         <% imageUrls.forEach(url => { %>
         <figure>
-            <div class="image" style="background-image: url(<%= url %>)" title="<%= imagesOfMe[url] %>"></div>
+            <img class="image" src="<%= url %>" title="<%= imagesOfMe[url] %>" alt="<%= imagesOfMe[url] %>">
             <div class="image-overlay"></div>
             <figcaption><%= imagesOfMe[url].split('Brenton Cozby ')[1] %></figcaption>
         </figure>

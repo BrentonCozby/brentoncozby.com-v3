@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<%- include(`${partials}/head`, {pageTitle: 'Scoot'}); -%>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <noscript>
+        <h3>Please enable JavaScript in order to view this site properly.</h3>
+    </noscript>
+
+    <%- include(`${partials}/contact`); -%>
+    <%- include(`${partials}/nav`); -%>
+
+    <main class="project">
+        <div>
+            <a class="view-other-projects" href="/">View Other Projects →</a>
+        </div>
+        <h1 class="project-title">Scoot</h1>
+        <div class="split-2">
+            <div class="split-box">
+                <p class="project-description">A single-page application for renting scooters and managing the rentals. Includes roles, permissions, authentication, AWS S3 integration, Google Maps API integration, a custom API to interact with the database, a React frontend with Redux for shared state management, and admininstrative screens and capabilities.</p>
+                <h3>Technology Used:</h3>
+                <ul class="project-tools">
+                    <li>React with Redux</li>
+                    <li>Postgres</li>
+                    <li>NodeJS with Express</li>
+                    <li>AWS S3 SDK</li>
+                    <li>Google Maps API</li>
+                </ul>
+            </div>
+            <div class="split-box">
+                <h3>Features:</h3>
+                <ul>
+                    <li>3 different user roles (admin, manager, user), each with different permissions levels</li>
+                    <li>Custom authentication using NodeJS, bcrypt, jsonwebtoken, and Postgres</li>
+                    <li>Can use the map to find available scooters within the map bounds</li>
+                    <li>Admin and manager roles can edit the scooter details through CRUD operations that interact with Postgres through an independent API</li>
+                    <li>Can filter list of scooters by details such as color and dates available</li>
+                    <li>Admin users can perform CRUD operations on users</li>
+                </ul>
+            </div>
+        </div>
+        <div class="project-buttons">
+            <div>
+                <a class="button view-code" href="https://github.com/BrentonCozby/scoot" title="Brenton Cozby's Scooter Rental App" target="_blank" rel="noopener"><i class="fab fa-github"></i> View Code</a>
+            </div>
+        </div>
+        <div class="project-featured-images">
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/modal.png" alt="Scoot Login">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/map.png" alt="Scoot Map">
+                </div>
+            </div>
+            <div class="split-2">
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/admin.png" alt="Scoot Admin">
+                </div>
+                <div class="split-box">
+                    <img src="https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/detail.png" alt="Scoot Modal">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include(`${partials}/footer`); -%>
+    <%- include(`${partials}/scripts`); -%>
+</body>
+</html>

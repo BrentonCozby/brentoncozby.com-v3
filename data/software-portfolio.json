@@ -1,26 +1,57 @@
 [{
-    "title": "Techlaunch.io",
-    "description": "Website for the Techlaunch Coding and IT School in Miami, FL.",
-    "tools": ["PHP", "SASS", "Webpack", "NodeJS", "jQuery"],
-    "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/techlaunch.jpg",
-    "demo": "https://techlaunch.io",
-    "code": "https://github.com/FVItech/Techlaunch.io",
-    "date": "June 2017"
+    "title": "Scoot",
+    "slug": "scoot",
+    "description": "A single-page application for renting scooters and managing the rentals. Includes roles, permissions, authentication, AWS S3 integration, Google Maps API integration, a custom API to interact with the database, a React frontend with Redux for shared state management, and admininstrative screens and capabilities.",
+    "tools": ["React with Redux", "NodeJS with Express", "Postgres", "AWS S3 SDK", "Google Maps API"],
+    "png": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/map.png",
+    "code": "https://github.com/BrentonCozby/scoot",
+    "date": "July 2018",
+    "featuredImages": [
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/login.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/map.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/admin.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/scoot-app/modal.png"
+    ]
 }, {
     "title": "Myocortex",
-    "description": "Website for Myocortex Human Performance Systems in Miami, FL. I created the Webpack 2 configurations from scratch. Webpack is controlling the entire build process, from development to production. The animations are built from scratch without any libraries.",
-    "tools": ["Pug", "SASS", "Webpack", "jQuery"],
+    "slug": "myocortex",
+    "description": "Website for Myocortex Human Performance Systems in Miami, FL. Includes custom Webpack configurations, custom build tools using NodeJS, and custom animations.",
+    "tools": ["Pug", "SASS", "Webpack", "jQuery", "NodeJS"],
     "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/myocortex.jpg",
     "demo": "http://www.myocortex.com",
     "code": "https://github.com/BrentonCozby/myocortex-website",
     "date": "June 2017"
 }, {
     "title": "Lumber Calculator",
+    "slug": "lumber-calculator",
     "description": "Optimizes lumber orders and generates cut lists for various City Year Care Force schematics.",
-    "tools": ["Browserify", "Pug", "SASS", "jQuery"],
+    "tools": ["Browserify", "Pug", "SASS", "jQuery", "NodeJS"],
     "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/lumber-calculator.jpg",
     "gif": "https://i.imgur.com/e52JDDd.gif",
     "demo": "https://brentoncozby.com/CareForce-Lumber-Calculator/",
     "code": "https://github.com/BrentonCozby/CareForce-Lumber-Calculator",
     "date": "June 2016"
+}, {
+    "title": "Accounting App",
+    "slug": "accounting-app",
+    "description": "A single-page application for tracking a company's expenditures. Includes roles, permissions, authentication, an API, a React frontend, and admininstrative screens and capabilities.",
+    "tools": ["React", "NodeJS with Express", "Postgres"],
+    "png": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditures.png",
+    "code": "https://github.com/BrentonCozby/accounting-app",
+    "date": "May 2018",
+    "featuredImages": [
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/login.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditures.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditure-modal.png",
+        "https://s3-us-west-1.amazonaws.com/brentoncozby.com/accounting-app/expenditure-report.png"
+    ]
+}, {
+    "title": "Techlaunch.io",
+    "slug": "techlaunch",
+    "description": "Website for the Techlaunch Coding and IT School in Miami, FL.",
+    "tools": ["PHP", "SASS", "Webpack", "NodeJS", "jQuery", "Twitter API", "Eventbrite API"],
+    "jpg": "https://s3-us-west-1.amazonaws.com/brentoncozby.com/techlaunch.jpg",
+    "demo": "https://techlaunch.io",
+    "code": "https://github.com/FVItech/Techlaunch.io",
+    "date": "June 2017"
 }]

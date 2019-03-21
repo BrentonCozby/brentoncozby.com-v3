@@ -23,10 +23,6 @@
         right: auto;
         top: auto;
         opacity: 1;
-        animation-name: zoomInFromLeft;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-delay: 100ms;
         z-index: 1;
     }
 
@@ -70,15 +66,11 @@
     .menu-a {
         padding: 10px 5px;
         line-height: 1;
-        margin: 20px 15px 0px 15px;
+        margin: 7px 0 0 35px;
         color: #eee;
         text-shadow: 1px 1px 1px #000;
         font-weight: 400;
         font-size: 16px;
-
-        &:first-of-type {
-            margin-left: 0;
-        }
     }
 }
 
